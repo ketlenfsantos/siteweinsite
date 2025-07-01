@@ -1,0 +1,40 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Um projeto com Tailwind CSS v4",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "start": "npm-run-all --parallel watch:*",
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "watch:html": "cpy ./src/index.html ./dist --watch",
+    "watch:js": "cpy ./src/script.js ./dist --watch",
+    "build": "cpy \"./src/**/*.html\" ./src/script.js ./dist && tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-grid": "^0.4.1",
+    "@tailwindcss/cli": "^4.1.10",
+    "@tailwindcss/postcss": "^4.1.10",
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "postcss": "^8.5.6",
+    "swiper": "^11.2.8"
+  },
+  "devDependencies": {
+    "cpy-cli": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^4.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ketlenfsantos/wensite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ketlenfsantos/wensite/issues"
+  },
+  "homepage": "https://github.com/ketlenfsantos/wensite#readme"
+}

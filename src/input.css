@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+.fadeInDown {
+  transform: translate3d(0, -20px, 0);
+}
+.fadeInUp {
+  transform: translate3d(0, 20px, 0);
+}
+.fadeInRight {
+  transform: translate3d(20px, 0, 0);
+}
+.fadeInLeft {
+  transform: translate3d(-20px, 0, 0);
+}
+
+/* 7 Adicione o CSS Essencial abaixo */
+[data-anime] {
+  opacity: 0;
+}
+.anime {
+  opacity: 1;
+  transform: none;
+  transition: transform 0.8s, opacity 0.8s;
+}
+
+/* CSS customizado para sobrescrever Splide e aplicar estilos Tailwind mais facilmente */
+/* Compile isso com seu build Tailwind para produção usando @apply */
+
+. .splide__pagination__page {
+  @apply w-3 h-3 bg-gray-400 rounded-full cursor-pointer transition-colors duration-300;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.splide__pagination__page.is-active {
+  @apply bg-purple-500; /* Cor ativa verde limão */
+}
+
+/* Estilos específicos para o slide ativo e inativo */
+.splide__slide > div {
+  @apply bg-gray-700 text-gray-400; /* Cor de fundo para slides inativos */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.splide__slide.is-active > div {
+  @apply text-gray-900; /* Cor de fundo verde limão para o slide ativo */
+}
