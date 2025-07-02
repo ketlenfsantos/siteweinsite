@@ -11,7 +11,7 @@
   "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
   "watch:html": "cpy ./src/index.html ./dist --watch",
   "watch:js": "cpy ./src/script.js ./dist --watch",
-  "build": "cpy './src/**/*.html' ./src/script.js --cwd=./ -o ./dist && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+ "build": "cpy './src/**/*.html' './src/script.js' --cwd=./ -o ./dist && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
   "postinstall": "npm install --legacy-peer-deps"
 },
   "dependencies": {
