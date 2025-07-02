@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proposta Comercial - Weinsite</title>
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="overflow-x-hidden bg-[url('/img/bgbody.jpg')] bg-cover bg-center bg-gradient-to-br from-purple-800 via-indigo-800 to-blue-800 text-white font-sans"
+  >
+    <section
+      class="mt-15 min-h-screen flex flex-col lg:flex-row justify-center items-center text-center px-6 sm:px-10 md:px-16 lg:px-12 py-10 gap-10 sm:gap-12 md:gap-16 lg:gap-20 -mb-24 sm:-mb-32 md:-mb-40 lg:-mb-48"
+    >
+      <div
+        class="lg:flex-[0.7] sm:mb-16 md:mb-20 2xl:mb-24 lg:mb-24 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-none"
+      >
+        <img
+          src="/img/logo-nav.png"
+          alt="Logo Weinsite"
+          class="w-full max-w-xs m-auto 2xl:mt-5 2xl:-mb-8 lg:-mb-6"
+        />
+        <img
+          src="/img/brainor.png"
+          alt="Logo Weinsite"
+          class="w-full max-w-full"
+        />
+      </div>
+
+      <div
+        class="mt-15 lg:mt-5 2xl:mt-5 mb-20 lg:flex-[3] lg:mb-28 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-xl container mx-auto text-start bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl border border-white/10"
+      >
+        <div
+          class="bg-white/10 border border-white/20 rounded-xl p-6 sm:p-8 mb-6 shadow-lg"
+        >
+          <h3
+            class="text-lg sm:text-xl font-bold mb-3 text-white flex items-center justify-center lg:justify-start"
+          >
+            <i
+              data-lucide="check-square"
+              class="w-5 h-5 sm:w-6 sm:h-6 text-pink-400 mr-4"
+            ></i>
+            Detalhes da sua Solicitação:
+          </h3>
+          <div class="space-y-2 text-sm sm:text-base">
+            <p class="border-b border-white/10 pb-2">
+              <strong class="font-semibold text-white">Seu nome:</strong>
+              <span id="nomeCliente" class="font-light text-gray-200 ml-2"
+                >-</span
+              >
+            </p>
+            <p class="border-b border-white/10 pb-2">
+              <strong class="font-semibold text-white">Empresa: </strong>
+              <span class="font-extrabold">Weinsite</span>
+            </p>
+            <p class="border-b border-white/10 pb-2">
+              <strong class="font-semibold text-white"
+                >Categoria Selecionada:</strong
+              >
+              <span
+                id="categoriaSelecionada"
+                class="font-light text-gray-200 ml-2"
+                >-</span
+              >
+            </p>
+            <p class="border-b border-white/10 pb-2">
+              <strong class="font-semibold text-white">Opção Escolhida:</strong>
+              <span id="opcaoSelecionada" class="font-light text-gray-200 ml-2"
+                >-</span
+              >
+            </p>
+            <p>
+              <strong class="font-semibold text-white"
+                >Informações Adicionais:</strong
+              >
+              <span
+                id="infoAdicionalIdentidade"
+                class="font-light text-gray-200 ml-2"
+              ></span
+              ><br />
+              <span
+                id="infoAdicionalCopywrite"
+                class="font-light text-gray-200 ml-2"
+              ></span>
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="mb-6 p-4 sm:p-6 bg-white/10 border border-white/20 rounded-xl shadow-lg"
+        >
+          <div
+            class="flex items-center justify-center lg:justify-start text-center mb-4"
+          >
+            <div
+              class="w-8 h-8 sm:w-10 sm:h-10 bg-pink-400/20 rounded-full flex items-center justify-center mr-3 shadow-md"
+            >
+              <i data-lucide="zap" class="w-4 h-4 sm:w-5 sm:h-5 text-white"></i>
+            </div>
+            <h3
+              class="text-lg sm:text-xl font-bold items-center text-white m-0"
+            >
+              Sua Solução Digital Ideal:
+            </h3>
+          </div>
+
+          <h3
+            class="text-xl sm:text-2xl font-extrabold text-white mb-6 mt-6 flex items-center justify-center lg:justify-start"
+          >
+            <span id="nomeProduto">Site Institucional</span>
+          </h3>
+
+          <p
+            id="descricaoProdutoDetalhe"
+            class="text-gray-100 mb-4 bg-white/10 rounded-xl p-4 text-xs sm:text-sm md:text-base leading-relaxed shadow-inner text-center"
+          >
+            Um site institucional é o investimento ideal para apresentar sua
+            empresa de forma profissional e eficiente...
+          </p>
+
+          <div
+            class="flex justify-center lg:justify-start mt-2 text-center items-center"
+          >
+            <a
+              class="linkWhatsappProdutoIdeal mt-6 inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition duration-300 text-center items-center"
+              href="#"
+              target="_blank"
+            >
+              Enviar e fazer Orçamento
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="min-h-screen flex flex-col justify-center items-center text-center px-6 sm:px-10 md:px-16 lg:px-12 py-10 gap-10"
+    >
+      <h1
+        class="text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent"
+      >
+        Seu produto ideal foi encontrado!
+      </h1>
+      <strong class="text-2xl w-3/4 lg:w-2/3 text-white">
+        Agora é só clicar para receber seu orçamento completo...
+      </strong>
+
+      <div class="flex justify-center">
+        <a
+          class="linkWhatsappProdutoIdeal mt-2 inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition duration-300"
+          href="#"
+          target="_blank"
+        >
+          Enviar e fazer Orçamento
+        </a>
+      </div>
+    </section>
+
+    <script>
+      lucide.createIcons();
+
+      function popularDados() {
+        const orcamentoJSON = localStorage.getItem('orcamento');
+        if (!orcamentoJSON) return;
+
+        const orcamento = JSON.parse(orcamentoJSON);
+
+        document.getElementById('nomeCliente').textContent =
+          orcamento.contato?.nome || '-';
+        document.getElementById('categoriaSelecionada').textContent =
+          orcamento.servico?.categoria || '-';
+        document.getElementById('opcaoSelecionada').textContent =
+          orcamento.servico?.objetivoSite || '-';
+
+        const produtoSelecionado = {
+          nome: 'Site Institucional',
+          descricao:
+            'Um site institucional é o investimento ideal para apresentar sua empresa...',
+        };
+
+        document.getElementById('nomeProduto').textContent =
+          produtoSelecionado.nome;
+        document.getElementById('descricaoProdutoDetalhe').textContent =
+          produtoSelecionado.descricao;
+
+        // WHATSAPP: gera e aplica o link
+        const textoWhatsApp = `
+Olá eu me chamo ${
+          orcamento.contato?.nome || 'Cliente'
+        }, preenchi o formulário pelo site e aqui está o meu  produto ideal:
+
+📝 Produto: ${produtoSelecionado.nome}
+📊 Descrição: ${produtoSelecionado.descricao}
+
+Gostaria de receber o orçamento completo, obrigada! 
+`;
+        const textoCodificado = encodeURIComponent(textoWhatsApp);
+        const linkWhatsApp = `https://wa.me/5551984520582?text=${textoCodificado}`;
+        document.querySelectorAll('.linkWhatsappProdutoIdeal').forEach((el) => {
+          el.href = linkWhatsApp;
+        });
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        popularDados();
+      });
+    </script>
+  </body>
+</html>
