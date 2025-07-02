@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "description": "Um projeto com Tailwind CSS v4",
   "main": "tailwind.config.js",
- "scripts": {
-  "start": "npm-run-all --parallel watch:*",
-  "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-  "watch:html": "cpy ./src/index.html ./dist --watch",
-  "watch:js": "cpy ./src/script.js ./dist --watch",
-  "build": "npx cpy \"./src/**/*.html\" ./src/script.js ./dist && npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
-},
+  "engines": {
+    "node": "20"
+  },
+  "scripts": {
+    "start": "npm-run-all --parallel watch:*",
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "watch:html": "cpy ./src/index.html ./dist --watch",
+    "watch:js": "cpy ./src/script.js ./dist --watch",
+    "build": "npx cpy \"./src/**/*.html\" ./src/script.js ./dist && npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+  },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-grid": "^0.4.1",
