@@ -23,16 +23,16 @@
   </head>
 
   <body
-    class="bg-[url('/img/bgbody.jpg')] bg-cover bg-center bg-gradient-to-br from-purple-800 via-indigo-800 to-blue-800 text-white font-sans"
+    class="bg-[url('./img/bgbody.jpg')] bg-cover bg-center bg-gradient-to-br from-purple-800 via-indigo-800 to-blue-800 text-white font-sans"
   >
 
    <section class="min-h-screen flex flex-col lg:flex-row justify-center items-center text-center px-4 py-20">
 
       <div> 
-        <img src="/img/brainor.png" alt="Logo Weinsite" class="w-[40rem]" /> </div>
+        <img src="./img/brainor.png" alt="Logo Weinsite" class="w-[40rem]" /> </div>
       <div>
 
-<img src="/img/logo-nav.png" alt="Logo Weinsite" class="w-72 mb-8 m-auto" />
+<img src="./img/logo-nav.png" alt="Logo Weinsite" class="w-72 mb-8 m-auto" />
          <h1
         class="text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent"
       >
@@ -55,7 +55,7 @@
       class="max-w-5xl mx-auto py-16 px-6 grid md:grid-cols-2 gap-10 text-center"
     >
       <div>
-        <img src="/img/brain.png" alt="" class="w-30 h-30 items-center m-auto " />
+        <img src="./img/brain.png" alt="" class="w-30 h-30 items-center m-auto " />
         <h1
           class="text-4xl lg:text-6xl font-extrabold text-gray-100 bg-clip-text"
         >
@@ -129,7 +129,7 @@
           </h3>
         </div>
       <div class="flex justify-center">
-        <img src="/img/us.png" alt="" class="w-72 h-[30rem] " />
+        <img src="./img/us.png" alt="" class="w-72 h-[30rem] " />
         </div>
   
       </div>
@@ -137,7 +137,7 @@
 
     <section class="max-w-4xl mx-auto py-16 px-6 text-center">
       <img
-        src="/img/brain.png"
+        src="./img/brain.png"
         alt="logotipo cérebro"
         class="w-40 h-40 items-center m-auto mb-10"
       />
@@ -227,7 +227,7 @@
           </p>
           <!-- <img
             id="imagemProdutoDetalhe"
-            src="/img/site-mockup.png"
+            src="./img/site-mockup.png"
             alt="Mockup do Produto/Serviço"
             class="mx-auto w-full md:w-4/5 lg:w-3/4 rounded-lg shadow-xl border border-white/10 mt-6"
           /> -->
@@ -736,8 +736,8 @@
         if (!orcamentoJSON) {
           // Se não houver orçamento, exibe uma mensagem e pode redirecionar
           document.body.innerHTML = `
-                      <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 bg-[url('/img/bgbody.jpg')] bg-cover bg-center text-white">
-                          <img src="/img/logo-nav.png" alt="Logo Weinsite" class="w-64 mb-8" />
+                      <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 bg-[url('./img/bgbody.jpg')] bg-cover bg-center text-white">
+                          <img src="./img/logo-nav.png" alt="Logo Weinsite" class="w-64 mb-8" />
                           <p class="text-2xl text-red-400">Nenhum orçamento encontrado. Por favor, preencha o formulário de orçamento primeiro.</p>
                           <a href="orcamento.html" class="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Ir para o Formulário de Orçamento</a>
                       </section>
@@ -816,26 +816,26 @@
               orcamento.servico?.objetivoSite === '2' ||
               orcamento.servico?.objetivoSite === '3' ||
               orcamento.servico?.objetivoSite === '4'
-                ? '/img/landingpage-mockup.png'
-                : '/img/site-mockup.png', // Ajuste os caminhos das imagens se necessário
+                ? './img/landingpage-mockup.png'
+                : './img/site-mockup.png', // Ajuste os caminhos das imagens se necessário
           },
           logo: {
             nome: 'Identidade Visual',
             descricao:
               'Criação completa da identidade visual da sua marca, com logo, paleta de cores e tipografia.',
-            imagem: '/img/identidade-mockup.png',
+            imagem: './img/identidade-mockup.png',
           },
           social: {
             nome: 'Produtos Digitais para Redes Sociais',
             descricao:
               'Desenvolvimento de artes e planejamento de conteúdo para suas redes sociais, garantindo uma presença digital profissional e engajadora.',
-            imagem: '/img/social-mockup.png', // Adicione uma imagem para Social Media
+            imagem: './img/social-mockup.png', // Adicione uma imagem para Social Media
           },
           stationery: {
             nome: 'Papelaria Digital',
             descricao:
               'Criação de itens de papelaria digital personalizada, como cartões de visita, flyers e convites, para reforçar a sua marca.',
-            imagem: '/img/papelaria-mockup.png', // Adicione uma imagem para Papelaria
+            imagem: './img/papelaria-mockup.png', // Adicione uma imagem para Papelaria
           },
         };
 

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orçamento Interativo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .form-step {
+        display: none;
+      }
+      .form-step.active {
+        display: block;
+      }
+
+      label.active {
+        background-color: #7c3aed; /* roxo igual hover */
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-montserrat bg-[url('/img/bgbody.jpg')] bg-cover bg-center min-h-screen flex items-center justify-center p-4"
+  >
+    <div class="bg-transparent shadow-xl rounded-lg p-8 max-w-3xl w-full">
+      <!-- ✅ TELA DE BOAS-VINDAS -->
+      <div id="welcome-screen" class="text-center space-y-6">
+        <div>
+          <img src="/img/brainzoi.png" alt="Mascote IA" class="w-40 mx-auto" />
+        </div>
+
+        <p class="text-white lg:text-xl lg:max-w-xl lg:text-center mx-auto">
+          Eu sou a Brainz, a assistente virtual da
+          <strong>Weinsite</strong>.<br />
+          Vou te ajudar a encontrar o produto ideal para para o seu negócio, em
+          poucos passos de forma rápida e prática. <br />
+        </p>
+
+        <p class="text-white lg:text-xl">Vamos começar?</p>
+
+        <div class="mt-2">
+          <label class="inline-flex items-start mt-4">
+            <input type="checkbox" id="accept-terms" class="mt-1 mr-2" />
+            <span class="text-sm text-gray-50">
+              Li e concordo com a
+              <a href="/termos" target="_blank" class="text-blue-600 underline"
+                >Termos e Política de Privacidade</a
+              >.
+            </span>
+          </label>
+        </div>
+
+        <button
+          id="start-btn"
+          class="bg-green-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition"
+        >
+          Começar Orçamento
+        </button>
+      </div>
+
+      <!-- ✅ CONTAINER DO FORMULÁRIO (inicialmente escondido) -->
+      <div id="form-container" class="hidden">
+        <h2
+          id="step-title"
+          class="text-gray-50 text-2xl font-bold text-center mb-0"
+        >
+          Informações de Contato
+        </h2>
+        <p id="step-description" class="text-center text-gray-50 mb-4">
+          Para começar, preencha as informações abaixo.
+        </p>
+        <div class="relative mb-6">
+          <div class="h-2 bg-gray-200 rounded">
+            <div
+              id="progress-bar"
+              class="h-2 bg-gradient-to-r from-blue-700 via-purple-400 to-pink-400 rounded transition-all duration-500"
+              style="width: 20%"
+            ></div>
+          </div>
+        </div>
+
+        <form id="quote-form" novalidate>
+          <!-- ETAPA 1 -->
+          <div id="step-1" class="form-step active text-gray-900">
+            <div class="space-y-2">
+              <h1 class="font-semibold text-gray-50">Qual seu nome?</h1>
+              <input
+                type="text"
+                name="name"
+                required
+                class="w-full p-3 border rounded"
+              />
+              <h1 class="font-semibold -mb-2 text-gray-50">Email:</h1>
+              <input
+                type="email"
+                name="email"
+                required
+                class="w-full p-3 border rounded"
+              />
+              <h1 class="font-semibold -mb-5 text-gray-50">Whatsapp:</h1>
+              <input
+                type="text"
+                name="whatsapp"
+                required
+                class="w-full p-3 border rounded"
+              />
+              <h1 class="font-semibold -mb-5 text-gray-50">
+                Qual nome e nicho do seu negócio?
+              </h1>
+              <input
+                type="text"
+                name="negocio"
+                required
+                class="w-full p-3 border rounded"
+              />
+              <h1 class="font-semibold text-gray-50">
+                "Há quanto tempo seu negócio está ativo?"
+              </h1>
+              <input
+                type="text"
+                name="tempoNegocio"
+                required
+                class="w-full p-3 border mt-0 rounded"
+              />
+            </div>
+          </div>
+
+          <!-- NOVA ETAPA - Iniciando no digital -->
+          <div id="step-inicio" class="form-step">
+            <p class="text-center mb-4 font-semibold text-gray-50">
+              Você está iniciando agora no digital?
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <label
+                class="border p-4 rounded cursor-pointer hover:bg-purple-500 text-white w-full sm:w-auto text-center"
+              >
+                <input
+                  type="radio"
+                  name="inicioDigital"
+                  value="sim"
+                  class="sr-only"
+                  required
+                />
+                Sim, estou começando agora
+              </label>
+              <label
+                class="border p-4 rounded cursor-pointer hover:bg-purple-500 text-white w-full sm:w-auto text-center"
+              >
+                <input
+                  type="radio"
+                  name="inicioDigital"
+                  value="nao"
+                  class="sr-only"
+                  required
+                />
+                Não, já tenho presença digital
+              </label>
+            </div>
+          </div>
+
+          <!-- ETAPA 2 -->
+          <div id="step-2" class="form-step">
+            <p class="text-center mb-4 font-semibold text-gray-50">
+              Escolha um serviço:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-50">
+              <label
+                class="border p-4 rounded cursor-pointer hover:bg-purple-500"
+              >
+                <input
+                  type="radio"
+                  name="service"
+                  value="site"
+                  class="sr-only"
+                  required
+                />
+                <div class="text-center">Site ou Landing Page</div>
+              </label>
+
+              <label
+                class="border p-4 rounded cursor-pointer hover:bg-purple-500"
+              >
+                <input
+                  type="radio"
+                  name="service"
+                  value="logo"
+                  class="sr-only"
+                  required
+                />
+                <div class="text-center">Identidade Visual</div>
+              </label>
+              <label
+                class="border p-4 rounded cursor-pointer hover:bg-purple-500"
+              >
+                <input
+                  type="radio"
+                  name="service"
+                  value="social"
+                  class="sr-only"
+                  required
+                />
+                <div class="text-center">
+                  Produtos Digitais para Redes Sociais
+                </div>
+              </label>
+
+              <label
+                class="border p-4 rounded cursor-pointer hover:bg-purple-500"
+              >
+                <input
+                  type="radio"
+                  name="service"
+                  value="stationery"
+                  class="sr-only"
+                  required
+                />
+                <div class="text-center">Papelaria Digital</div>
+              </label>
+            </div>
+          </div>
+
+          <!-- ETAPA SITE -->
+          <div id="step-site" class="form-step">
+            <label class="block mb-2 text-gray-50">Qual seu objetivo?</label>
+            <select
+              name="site_pages"
+              class="w-full px-3 py-2 sm:p-3 border rounded text-sm sm:text-base"
+            >
+              <option value="" disabled selected>🔽 Selecione uma opção</option>
+              <option value="1">
+                🏢 Quero apresentar minha empresa ou marca
+              </option>
+              <option value="2">🛒 Vender um Produto ou Serviço</option>
+              <option value="3">📢 Divulgar um Produto Específico</option>
+              <option value="4">🚀 Lançar um Produto ou Serviço</option>
+              <option value="5">🎨 Expor meu trabalho ou projetos</option>
+              <option value="6">✍️ Criar um Blog de Conteúdos</option>
+            </select>
+          </div>
+
+          <!-- ETAPA ID -->
+          <div id="step-logo" class="form-step">
+            <label class="block mb-2 text-gray-50"
+              >Você possuí ideias e inspirações?</label
+            >
+            <select name="logo_package" class="w-full p-3 border rounded">
+              <option value="basic">Sim</option>
+              <option value="intermediate">Não</option>
+            </select>
+          </div>
+
+          <!-- ETAPA SOCIAL -->
+          <div id="step-social" class="form-step">
+            <label class="block mb-2 text-gray-50"
+              >O que você precisa para suas Redes Sociais?</label
+            >
+            <select name="social_count" class="w-full p-3 border rounded">
+              <option value="" disabled selected>🔽 Selecione uma opção</option>
+              <option value="1">
+                Preciso de Posts personalizados para o meu feed
+              </option>
+              <option value="2">
+                Quero criar capas para meus stories e reels
+              </option>
+              <option value="3">
+                Preciso de ajuda para organizar minha bio do Instagram
+              </option>
+              <option value="4">
+                Quero um planejamento mensal de conteúdo, com posts e legendas
+                inclusas
+              </option>
+              <option value="5">Todas as opções acima</option>
+            </select>
+          </div>
+
+          <!-- ETAPA SOCIAL 2 -->
+          <div id="step-social2" class="form-step">
+            <label class="block mb-2 text-gray-50"
+              >Você já tem identidade visual?</label
+            >
+            <select
+              name="has_identity"
+              class="w-full p-3 border rounded"
+              required
+            >
+              <option value="" disabled selected>🔽 Selecione uma opção</option>
+              <option value="yes">Sim, já possuo</option>
+              <option value="no">Não possuo, precisarei de ajuda.</option>
+            </select>
+          </div>
+
+          <!-- ETAPA COPYWRITE/CONTEÚDO -->
+          <div id="copy-write" class="form-step">
+            <label class="block mb-2 text-gray-50">
+              Você já tem o conteúdo + Copywrite (escrita) prontos?
+            </label>
+            <select
+              name="has_identity_copywrite"
+              class="w-full p-3 border rounded"
+              required
+            >
+              <option value="" disabled selected>🔽 Selecione uma opção</option>
+              <option value="yes">Sim, já possuo.</option>
+              <option value="no">Não, precisarei de ajuda para criar.</option>
+            </select>
+          </div>
+
+          <!-- ETAPA PAPELARIA DIGITAL -->
+          <div id="step-stationery" class="form-step">
+            <label class="block mb-2 text-gray-50">
+              Quais Artes de Papelaria Digital você precisa?
+            </label>
+            <select
+              name="stationery_options"
+              class="w-full p-3 border rounded"
+              required
+            >
+              <option value="" disabled selected>🔽 Selecione uma opção</option>
+              <option value="cards">Cartões de Visita</option>
+              <option value="flyers">Flyers e Panfletos</option>
+              <option value="invitations">Convites Digitais</option>
+              <option value="others">Outros produtos</option>
+            </select>
+          </div>
+
+          <!-- ETAPA FINAL -->
+          <div id="step-final" class="form-step">
+            <label class="block mb-2">Urgência do projeto:</label>
+            <select name="urgency" class="w-full p-3 border rounded">
+              <option value="normal">Normal</option>
+              <option value="urgente">Urgente (+20%)</option>
+            </select>
+          </div>
+
+          <div class="flex justify-between mt-6">
+            <button
+              type="button"
+              id="prev-btn"
+              class="bg-purple-800 cursor-pointer text-gray-50 px-4 py-2 rounded"
+            >
+              Anterior
+            </button>
+            <button
+              type="button"
+              id="next-btn"
+              class="bg-green-700 text-white px-4 py-2 rounded"
+            >
+              Próximo
+            </button>
+            <button
+              type="submit"
+              id="submit-btn"
+              class="bg-green-600 text-white px-4 py-2 rounded hidden"
+              href="./modelo-pdf.html"
+            >
+              Gerar Orçamento
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const welcome = document.getElementById('welcome-screen');
+        const formContainer = document.getElementById('form-container');
+        const startBtn = document.getElementById('start-btn');
+
+        startBtn.addEventListener('click', () => {
+          const acceptTerms = document.getElementById('accept-terms');
+          if (!acceptTerms.checked) {
+            alert(
+              'Por favor, aceite os Termos de Serviço e a Política de Privacidade antes de continuar.',
+            );
+            return;
+          }
+
+          welcome.classList.add('hidden');
+          formContainer.classList.remove('hidden');
+        });
+
+        const steps = Array.from(document.querySelectorAll('.form-step'));
+        const form = document.getElementById('quote-form');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const submitBtn = document.getElementById('submit-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const stepTitle = document.getElementById('step-title');
+        const stepDescription = document.getElementById('step-description');
+
+        const serviceStepMap = {
+          site: 'step-site',
+          write: 'copy-write',
+          logo: 'step-logo',
+          social: 'step-social',
+          social2: 'step-social2',
+          stationery: 'step-stationery',
+        };
+
+        const titles = {
+          'step-1': {
+            title: 'Vamos nos conhecer?',
+            desc: 'Preencha suas informações de contato  ',
+          },
+          'step-inicio': {
+            title: 'Você está começando agora?',
+            desc: 'Entender isso nos ajuda a montar a proposta ideal para você.',
+          },
+          'step-2': {
+            title: 'Qual serviço você precisa?',
+            desc: 'Selecione a área que melhor representa sua necessidade. A partir disso, vamos personalizar as próximas perguntas',
+          },
+          'step-site': {
+            title: 'Qual seu objetivo?',
+            desc: 'A partir dessa informação consigo selecionar o serviço ideal pra você',
+          },
+          'step-logo': {
+            title: 'Sobre a sua Identidade Visual',
+            desc: 'Que vai promover a autoridade e marca registrada do seu negócio',
+          },
+
+          'step-stationery': {
+            title: 'Produtos Digitais para Papelaria',
+            desc: 'Transformamos sua ideia em realidade no digital, confeccionamos produtos que podem ser impressos ou usados no digital ',
+          },
+
+          'step-social': {
+            title: 'Produtos Digitais para Redes Sociais',
+            desc: 'Invista seu tempo no que realmente importa, deixe o processo criativo pra gente',
+          },
+
+          'step-social2': {
+            title: 'Identidade Visual e Design',
+            desc: 'Para estruturar o design do seu produto escolhido é preciso ter uma identidade visual como logotipo, cores, tipografia',
+          },
+
+          'copy-write': {
+            title: 'Conteúdo da Página',
+            desc: 'Para um site dar os resultados esperados, é preciso ter um conteúdo estratégico, desde a parte visual (banners, imagens) como a parte escrita(Copywrite)',
+          },
+
+          'step-final': {
+            title: 'Finalizar Orçamento',
+            desc: 'Escolha o prazo.',
+          },
+        };
+
+        let stepPath = ['step-1', 'step-inicio', 'step-2'];
+        let currentStepIndex = 0;
+
+        const updateUI = () => {
+          const stepId = stepPath[currentStepIndex];
+          steps.forEach((s) => s.classList.toggle('active', s.id === stepId));
+          const { title, desc } = titles[stepId] || {};
+          stepTitle.textContent = title || '';
+          stepDescription.textContent = desc || '';
+
+          prevBtn.disabled = currentStepIndex === 0;
+          const isLast = currentStepIndex === stepPath.length - 1;
+          nextBtn.classList.toggle('hidden', isLast);
+          submitBtn.classList.toggle('hidden', !isLast);
+
+          const progress = ((currentStepIndex + 0.5) / stepPath.length) * 100;
+          progressBar.style.width = `${progress}%`;
+        };
+
+        const validateStep = () => {
+          const currentStepId = stepPath[currentStepIndex];
+          const currentStep = document.getElementById(currentStepId);
+          const requiredFields = currentStep.querySelectorAll(
+            'input[required], select[required]',
+          );
+          for (let field of requiredFields) {
+            if (field.type === 'radio') {
+              const radios = document.querySelectorAll(
+                `input[name="${field.name}"]`,
+              );
+              if (![...radios].some((r) => r.checked)) {
+                alert('Selecione uma opção.');
+                return false;
+              }
+            } else if (!field.value) {
+              alert('Preencha todos os campos obrigatórios.');
+              return false;
+            }
+          }
+          return true;
+        };
+
+        nextBtn.addEventListener('click', () => {
+          if (!validateStep()) return;
+
+          const currentStep = stepPath[currentStepIndex];
+          if (currentStep === 'step-2') {
+            const selected = form.querySelector(
+              'input[name="service"]:checked',
+            )?.value;
+            if (selected) {
+              if (selected === 'site') {
+                stepPath = [
+                  'step-1',
+                  'step-2',
+                  'step-site',
+                  'step-social2',
+                  'copy-write',
+                ];
+              } else if (selected === 'social') {
+                stepPath = [
+                  'step-1',
+                  'step-2',
+                  'step-social',
+                  'step-social2',
+                  'copy-write',
+                ];
+              } else if (selected === 'stationery') {
+                stepPath = [
+                  'step-1',
+                  'step-2',
+                  'step-stationery',
+                  'step-social2',
+                  'copy-write',
+                ];
+              } else if (selected === 'logo') {
+                stepPath = ['step-1', 'step-2', 'step-logo', 'copy-write'];
+              } else {
+                stepPath = [
+                  'step-1',
+                  'step-2',
+                  serviceStepMap[selected],
+                  'step-final',
+                ];
+              }
+              currentStepIndex++;
+              updateUI();
+              return;
+            }
+          }
+
+          currentStepIndex++;
+          updateUI();
+        });
+
+        prevBtn.addEventListener('click', () => {
+          if (currentStepIndex > 0) {
+            currentStepIndex--;
+            const stepId = stepPath[currentStepIndex];
+            if (stepId === 'step-2') stepPath = ['step-1', 'step-2'];
+            updateUI();
+          }
+        });
+
+        document.querySelectorAll('input[name="service"]').forEach((input) => {
+          input.addEventListener('change', () => {
+            if (!validateStep()) return;
+            const selected = input.value;
+            if (selected === 'site') {
+              stepPath = [
+                'step-1',
+                'step-2',
+                'step-site',
+                'step-social2',
+                'copy-write',
+              ];
+            } else if (selected === 'social') {
+              stepPath = [
+                'step-1',
+                'step-2',
+                'step-social',
+                'step-social2',
+                'copy-write',
+              ];
+            } else if (selected === 'stationery') {
+              stepPath = [
+                'step-1',
+                'step-2',
+                'step-stationery',
+                'step-social2',
+                'copy-write',
+              ];
+            } else if (selected === 'logo') {
+              stepPath = ['step-1', 'step-2', 'step-logo', 'copy-write'];
+            }
+            currentStepIndex = 1;
+            updateUI();
+          });
+        });
+
+        // Seleciona todos os inputs do grupo 'service'
+        document.querySelectorAll('input[name="service"]').forEach((input) => {
+          input.addEventListener('change', () => {
+            // Remove 'active' dos labels de todos inputs 'service'
+            document.querySelectorAll('input[name="service"]').forEach((i) => {
+              i.parentElement.classList.remove('active');
+            });
+            // Adiciona 'active' no label do input selecionado
+            if (input.checked) {
+              input.parentElement.classList.add('active');
+            }
+          });
+        });
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!validateStep()) return;
+
+          // Captura todos os dados do form
+          const formData = new FormData(form);
+          const data = {};
+          for (const [key, value] of formData.entries()) {
+            if (data[key]) {
+              data[key] = Array.isArray(data[key])
+                ? [...data[key], value]
+                : [data[key], value];
+            } else {
+              data[key] = value;
+            }
+          }
+
+          // Organiza os dados no formato desejado
+          const orcamento = {
+            contato: {
+              nome: data.name || '',
+              email: data.email || '',
+              whatsapp: data.whatsapp || '',
+              negocio: data.negocio || '',
+              tempoNegocio: data.tempoNegocio || '',
+            },
+            servico: {
+              categoria: data.service || '',
+              objetivoSite: data.site_pages || '',
+              logoInsp: data.logo_package || '',
+              socialNecessidade: data.social_count || '',
+              socialIdentidade: data.has_identity || '',
+              copywrite: data.has_identity_copywrite || '',
+              papelaria: data.stationery_options || '',
+              urgencia: data.urgency || 'normal',
+              inicioDigital: data.inicioDigital || '',
+            },
+          };
+
+          // Salva no localStorage para a próxima página usar
+          localStorage.setItem('orcamento', JSON.stringify(orcamento));
+
+          // Redireciona para a página do PDF (ajuste o nome conforme seu arquivo)
+          window.location.href = 'modelo-pdf.html';
+        });
+
+        updateUI();
+      });
+    </script>
+  </body>
+</html>

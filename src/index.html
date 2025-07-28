@@ -8,10 +8,14 @@
 
     <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-    <link rel="stylesheet" href="./output.css" />
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
     <link href="./output.css" rel="stylesheet" />
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
  
 
 
@@ -19,50 +23,169 @@
     <title>WEINSITE - Sites e Produtos Digitais</title>
 
 
-
+<!-- 
       <style>
-    /* Estilo da barra de progresso */
+    Estilo da barra de progresso
     .progress-bar {
       height: 6px;
       background-color: #4f46e5; /* Indigo-600 */
       transition: width 0.3s ease;
     }
-  </style>
+    .accordion-content.open {
+  max-height: 500px; /* ajuste conforme seu conteúdo */
+  opacity: 1;
+
+  .swiper-button-next,
+      .swiper-button-prev {
+        color: #a855f7; /* cor desejada */
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+      }
+
+      /* Dentro do contêiner */
+      .swiper-button-prev {
+        left: -10px;
+        width: 10px;
+        height: 10px;
+      }
+
+      .swiper-button-next {
+        right: 10px;
+      }
+
+      /* Bullet ativo */
+      .swiper-pagination-bullet-active {
+        background-color: #a855f7;
+      }
+
+      /* Bullets inativos (opcional para suavizar) */
+      .swiper-pagination-bullet {
+        background-color: #555;
+        opacity: 0.5;
+      }
+}
+  </style> -->
   </head>
-  <body  class="font-montserrat bg-[url('/img/bgbody.jpg')] bg-cover bg-center overflow-x-hidden w-full" >
-       <a href="https://wa.me/5591999999999" target="_blank" class=" lg:w-15 lg:h-15 w-10 h-10  fixed bottom-5 right-5 z-2 bg-green-700 rounded-4xl  items-center justify-center shadow-lg transform hover:scale-105 hover:bg-green-600 transition-colors duration-300 p-2 border-none">
+  <body  id="home" class="font-montserrat bg-[url('./img/bgbody.webp')] bg-cover bg-center overflow-x-hidden  " >
+       <a href="https://wa.me/5551989208255" target="_blank" class="lg:w-15 lg:h-15 w-18 h-18  fixed bottom-5 right-5 z-2 bg-green-700 rounded-4xl  items-center justify-center shadow-lg transform hover:scale-105 hover:bg-green-600 transition-colors duration-300 p-3 lg:p-2 border-none">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="botão flutuante de whatsapp">
         </a>
 
-   <section
+        
+
+ <section
   data-anime="200"
-  class="bg-[url('/img/bgfirst.png')] bg-cover bg-fixed h-screen max-w-full text-white"
+  class="bg-[url('./img/bgfirst.webp')] bg-cover bg-center bg-no-repeat sm:bg-fixed h-screen max-w-full text-white" 
 >
   <!-- Header continua igual -->
-  <header class="flex justify-center gap-30 lg:gap-120 items-center p-8">
-    <img src="/img/logo-nav.png" alt="Logo do site" class="w-55 h-20 mt-10 lg:w-42 lg:h-15 lg:mt-0" alt="Logotipo do Header" />
-    <button class="hidden lg:block bg-green-700 p-2 w-60 rounded-xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold">
-    Fale Conosco
+  <header class="flex justify-center lg:gap-32  gap-10  p-10 text-center font-poppins">
+    <a href="./index.html">
+<img src="./img/logo-nav.webp" alt="Logo do site" class="w-56 h-16 mt-10 lg:w-42 lg:h-15 lg:mt-0" alt="Logotipo do Header" />
+
+    </a>
+    
+
+<!-- Botão de menu -->
+<button id="menuToggle" class="lg:hidden z-50 relative ">
+  <svg id="menuIcon" class="w-6 h-6 mt-9 text-white transition-transform duration-300 cursor-pointer" fill="none"
+    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
+  
+  <!-- navegação desktop -->
+    <nav id="menu" class="hidden lg:flex gap-10 items-center text-sm"> <ul class="flex p-5 gap-16">
+      
+       <li id="teste2" class="cursor-pointer hover:text-purple-300"> <a href="./sobre-produtos.html"> Nossos Serviços</a></li>
+       <li class="cursor-pointer hover:text-purple-300"> <a href="./portfólio.html"> Portfólio</a></li>
+       <li id="teste" class="cursor-pointer hover:text-purple-300"> <a href="./orçamento.html">Faça o teste !</a>
+
+       </li>
+    </ul></nav>
+
+   <!-- DIV HOVER MENU TESTE -->
+
+ <div id="hoverDiv" class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/12 bg-transparent  text-white px-4  w-90 backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-5">
+    
+    <!-- Texto -->
+    <p class="w-2/3 font-extrabold text-sm m-auto">
+      Olá, eu sou a Brainz!<br />
+      Vamos juntos descobrir o seu produto ideal?
+    </p>
+
+    <!-- Imagem -->
+    <img src="./img/brainzoi.webp" alt="imagem avatar brainz" class="w-30   h-auto">
+  </div>
+
+  <!-- DIV NOSSOS SERVIÇOS
+    -->
+
+ 
+
+  <a href="https://wa.me/5551989208255" target="_blank">
+
+    <button class="hidden lg:block bg-green-700 text-xs w-40 mt-2 h-10 rounded-2xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold cursor-pointer">
+  Fale Conosco
     </button>
+
+  </a>
+
+   <!-- Menu Mobile -->
+<nav id="mobileMenu" class="absolute top-20 left-0 w-full backdrop-blur-md  text-white text-center transition-all duration-300 ease-in-out overflow-hidden max-h-0 hidden mt-16">
+  <ul class="space-y-3 p-4 text-sm">
+   
+     <a href="./sobre-produtos.html">  <li class="hover:bg-purple-200/40 rounded-xl w-40 m-auto p-1 cursor-pointer">Nossos Serviços</li> </a>
+     <a href="./portfólio.html">  <li class="hover:bg-purple-200/40 rounded-xl w-20 m-auto p-1 cursor-pointer">Portfólio</li> </a>
+     <a href="./orçamento.html">  <li id="menuMobs" class="hover:bg-purple-200/40 rounded-xl w-40 m-auto p-1 cursor-pointer">Faça o teste</li> </a>
+     <a href="./orçamento.html"> <button class=" bg-green-600 mt-2 hover:bg-green-500  rounded-xl w-40 m-auto p-1 cursor-pointer"> Fale Conosco</button>
+  </ul>
+</div>
+    
   </header>
 
+   <div id="hoverDiv2" class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/16 bg-transparent  text-white px-4  w-[580px] backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-5">
+    
+    <!-- Texto -->
+<ul class="p-5 grid grid-cols-2 space-x-8 font-poppins">
+  <li class="p-2">  <img src="./img/brain.png" alt="" class="h-6 inline-block"> Sites e Landing Pages</li>
+  <li class="p-2"> <img src="./img/brain.png" alt="" class="h-6 inline-block"> Identidade Visual</li>
+  <li class="p-2"> <img src="./img/brain.png" alt="" class="h-6 inline-block"> Redes Sociais</li>
+  <li class="p-2"> <img src="./img/brain.png" alt="" class="h-6 inline-block"> Papelaria Digital</li>
+</ul>
+
+  </div>
+
+  <!-- <div id="hoverDiv4" class="hidden flex flex-row absolute top-[calc(100%+10px)] left-4/5 -translate-x-3/11 bg-transparent text-white px-4 w-[22rem] max-w-lg m-auto backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-5">
+  <p class="w-2/3 font-extrabold text-sm m-auto">
+    Olá, eu sou a Brainz!<br />
+    Vamos juntos descobrir o seu produto ideal?
+  </p>
+  <img src="./img/brainzoi.webp" alt="imagem avatar brainz" class="w-20 h-auto" />
+</div> -->
+
+
   <!-- Conteúdo centralizado -->
-  <div class="flex flex-col items-center justify-center text-center h-[calc(100vh-160px)] px-4 -mt-16 lg:mt-2">
-    <h1 class="font-bold  text-2xl lg:text-3xl xl:text-4xl max-w-[100%] bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+  <div class="flex flex-col items-center justify-center text-center h-[calc(100vh-160px)] px-4 -mt-16 lg:-mt-16">
+    <h1 class="font-bold  text-xl lg:text-3xl xl:text-4xl max-w-[100%] bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
       Apareça no digital e
       <span class="font-extrabold">potencialize suas vendas!</span>
     </h1>
 
-    <h2 class="text-base font-light mt-2 mb-4 w-11/12 md:w-3/4 lg:text-xl">
+    <h2 class="text-sm font-light mt-2 mb-4 w-11/12 md:w-3/4 lg:text-xl">
       A Weinsite tem as Soluções Digitais para <span class="font-semibold">destacar</span> o teu negócio na Internet
     </h2>
 
     <button
-      class="bg-green-700 text-white px-4 py-3 rounded-xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold w-[30rem]  cursor-pointer"
+      class="bg-gradient-to-r from-blue-800 to-purple-800  text-white px-6 py-3 rounded-xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold lg:w-[22rem] w-65  cursor-pointer"
       
     >
-    <a href="orçamento.html" class=cursor-pointer">
-  Descubra aqui qual o produto ideal para você
+    <a href="orçamento.html" class='cursor-pointer text-sm leading-none font-poppins'>
+  Descubra qual é o seu produto ideal
 </a>
     </button>
   </div>
@@ -71,7 +194,7 @@
 
 
 
-    <section  class=" fadeIn container max-w-md mx-auto  m-auto mt-25 flex flex-col lg:flex-row gap-10 justify-between items-center text-center mb-20 text-white font-thin">
+    <section  class=" fadeIn container max-w-md mx-auto  m-auto mt-25 flex flex-col lg:flex-row gap-10 justify-between items-center text-center mb-20 text-white font-thin font-poppins">
 
 
   <div data-anime="400" id="text-carousel" class="text-2xs lg:text-xl lg:hidden w-85 font-semibold text-center transition-opacity duration-500 ease-in-out">
@@ -103,35 +226,36 @@
             <hr class="mt-30 text-white">
  
 
-    <section class="container  justify-center mt-20 text-center lg:p-5 lg:mx-auto" id="services">
+    <section id="nossosServiços" class="container  justify-center mt-20 text-center md:mx-auto lg:p-5 lg:mx-auto" id="services">
 
       <h1  data-anime="500" class="fadeinDown text-center font-light text-xl lg:text-xl text-white"> nossos serviços </h1>
      <h2 data-anime="500" class="fadeinDown text-center font-extrabold text-2xl lg:text-3xl text-gray-50 w-70 lg:w-150 mx-auto" >
   Que vão <span class="bg-gradient-to-r from-blue-300 via-purple-400 to-pink-400 bg-clip-text text-transparent"> potencializar </span>o seu negócio
 </h2>
-      <article data-anime="500" class="fadeInLeft container 2xl:mt-0 mt-20 m-auto flex flex-col lg:flex-row gap-12 justify-between items-center text-center lg:mb-10 2xl:p-32  ">
-        <div class="lg:text-start text-center text-gray-50 border-1 lg:p-5 p-5  py-7 rounded-xl"> 
-          <h1 class="font-bold  text-2xl lg:text-start lg:text-2xl">Sites e Landing Pages</h1>
-          <h2 class="lg:w-110 mt-1 lg:text-start text-center w-85 lg:text-sm italic">
+      <article data-anime="500" class="fadeInLeft justify-center container  mt-20 m-auto flex flex-col lg:flex-row gap-12  items-center text-center lg:mb-10 2xl:mt-20 2xl:gap-20 2xl:text-center ">
+        <div class="lg:text-start text-center text-gray-50 border-1 lg:p-5 p-5  py-7 rounded-xl lg:w-[35rem] md:w-[40rem]"> 
+          <h1 class="font-bold  text-2xl lg:text-start lg:text-2xl ">Sites e Landing Pages</h1>
+          <h2 class="mt-3 lg:w-120 w-80 m-auto ml-auto lg:ml-0 lg:text-sm italic md:w-[35rem] font-poppins">
             Páginas de alta conversão que vão te trazer resultados de acordo com
             o seu objetivo
           </h2>
-          <p class="italic text-xs">   </p>
-          <ul class="mt-5">
-              <li class="lg:w-120 lg:text-sm w-85 mx-auto text-start">
+          <p class="italic text-xs font-poppins">   </p>
+          <ul class="mt-5 font-poppins ">
+              <li class="lg:w-120 lg:text-sm w-85 md:w-[35rem] mx-auto text-start">
              <i class="fa-regular fa-square-check"></i> <b>Site Institucional: </b>apareça nas buscas da maior plataforma de pesquisas do mundo: <b>o Google</b> e aumente seus clientes </li>
       
        
 
-              <li class="mt-5 lg:w-120 lg:text-sm w-85 mx-auto text-start"> <i class="fa-regular fa-square-check"></i>   <b>Landing Pages: </b> do lançamento até a venda, páginas de alta conversão que trazem resultados  </li>
+              <li class="mt-5 lg:w-120 lg:text-sm w-85 mx-auto text-start md:w-[35rem]"> <i class="fa-regular fa-square-check "></i>   <b>Landing Pages: </b> do lançamento até a venda, páginas de alta conversão que trazem resultados  </li>
 
-              <li class="mt-5 lg:text-sm lg:w-120 w-85 mx-auto text-start"> <i class="fa-regular fa-square-check"></i>  <b>Página de Links: </b>facilite visualmente o caminho para o cliente ir até você, com um design intuitivo e personalizado   </li>
+              <li class="mt-5 lg:text-sm lg:w-120 w-85 mx-auto text-start md:w-[35rem]"> <i class="fa-regular fa-square-check"></i>  <b>Página de Links: </b>facilite visualmente o caminho para o cliente ir até você, com um design intuitivo e personalizado   </li>
 
-                <li class="mt-5 lg:text-sm lg:w-120 w-85 mx-auto text-start"><i class="fa-regular fa-square-check"></i> <b>Portófilio Profissional: </b>mostre seus produtos ou serviços de maneira profissional </li>
+                <li class="mt-5 lg:text-sm lg:w-120 w-85 mx-auto text-start md:w-[35rem]"><i class="fa-regular fa-square-check"></i> <b>Portófilio Profissional: </b>mostre seus produtos ou serviços de maneira profissional </li>
        
           </ul>
 
-          <button class="rounded-2xl text-base text-center mt-8 font-semibold text-gray-50 lg:text-sm  bg-green-700 p-2 w-60 cursor-pointer  transform hover:scale-105 hover:bg-green-500 transition duration-300 ease-in-out " > Clique aqui e saiba mais </button>
+          <a href="sobre-produtos.html"> 
+          <button class="rounded-2xl text-base text-center mt-8 font-semibold text-gray-50 lg:text-sm  bg-green-700 p-2 w-60 cursor-pointer  transform hover:scale-105 hover:bg-green-500 transition duration-300 ease-in-out " > Saiba mais  </button> </a>
 
 
         </div>
@@ -141,26 +265,28 @@
  
 
 
-<div class="splide slider-principal bg-none p-5   relative  " aria-label="Exemplo de Slider RTL">
+        
+
+<div class="splide slider-principal bg-none p-5 mb-10 2xl:max-w-2xl max-w-sm  relative  " aria-label="Exemplo de Slider RTL">
             <div class="splide__track h-[26rem] bg-none rounded-xl">
                 <ul class="splide__list h-full">
                     <li class="splide__slide h-full">
                         <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold">
 
-                          <img src="/img/insalute.mob.jpg" alt="Imagem mobile página insalute " class="w-full h-full object-center rounded-2xl">
+                          <img src="./img/insalute.mob.jpg" alt="Imagem mobile página insalute " class="w-full h-full object-center rounded-2xl">
                         </div>
                     </li>
                     <li class="splide__slide h-full">
-                        <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold"><img src="/img/desk.png" alt="Imagem desktop página insalute" class="w-full h-full object-center rounded-sm"></div>
+                        <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold"><img src="./img/desk.webp" alt="Imagem desktop página insalute" class="w-full h-full object-center rounded-sm"></div>
                     </li>
                     <li class="splide__slide">
-                        <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold"><img src="/img/lpconvert.png" alt="Imagem desktop página de vendas nutricionista" class="w-full h-full object-center rounded-sm"></div>
+                        <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold"><img src="./img/lpconvert.webp" alt="Imagem desktop página de vendas nutricionista" class="w-full h-full object-center rounded-sm"></div>
                     </li>
                     <li class="splide__slide">
-                        <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold"><img src="/img/portmob.png" alt="Imagem mobile Portfólio" class="w-full h-full object-center rounded-sm"></div>
+                        <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold"><img src="./img/portmob.webp" alt="Imagem mobile Portfólio" class="w-full h-full object-center rounded-sm"></div>
                     </li>
                        <li class="splide__slide">
-                        <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold"><img src="/img/deskport.png" alt="Imagem desktop portófilio" class="w-full h-full object-center rounded-sm"></div>
+                        <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold"><img src="./img/deskport.webp" alt="Imagem desktop portófilio" class="w-full h-full object-center rounded-sm"></div>
                     </li>
                    
                 </ul>
@@ -179,105 +305,107 @@
         
       </article>
 
+      <!-- identidade visual -->
       
-      <article data-anime="500" class="  flex flex-col lg:flex-row  justify-between items-center text-center lg:mb-14 lg:mt-24 2xl:p-32">
+    <article data-anime="500" class="flex flex-col-reverse lg:flex-row justify-center items-center text-center lg:mb-10  2xl:text-center  ">
         
           
-<div class="splide slider-secundario bg-none    relative 2xl:max-w-xl lg:max-w-xl "  aria-label="Segundo Slider RTL">
+<div class="splide slider-secundario bg-none mb-15  relative lg:max-w-xl 2xl:max-w-xl  "  aria-label="Segundo Slider RTL">
   <div class="splide__track h-[20rem] lg:h-[25rem] bg-none rounded-xl">
     <ul class="splide__list h-full">
       <li class="splide__slide h-full">
         <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold">
-          <img src="/img/lamour.png" alt="Imagem 1 do segundo slider" class="w-full h-full object-center rounded-2xl">
+          <img src="./img/lamour.webp" alt="Imagem 1 do segundo slider" class="w-full h-full object-center rounded-2xl">
         </div>
       </li>
       <li class="splide__slide h-full">
         <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold">
-          <img src="/img/insalut.png"  alt="Imagem 2 do segundo slider" class="w-full h-full object-center rounded-sm">
+          <img src="./img/insalut.webp"  alt="Imagem 2 do segundo slider" class="w-full h-full object-center rounded-sm">
         </div>
       </li>
       <li class="splide__slide">
         <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold">
-          <img src="/img/araupp.png" alt="Imagem 3 do segundo slider" class="w-full h-full object-center rounded-sm">
+          <img src="./img/araupp.webp" alt="Imagem 3 do segundo slider" class="w-full h-full object-center rounded-sm">
         </div>
       </li>
       <li class="splide__slide">
         <div class="flex items-center justify-center h-full rounded-lg text-6xl font-extrabold">
-          <img src="/img/lulops.png" alt="Imagem 4 do segundo slider" class="w-full h-full object-center rounded-sm">
+          <img src="./img/lulops.webp" alt="Imagem 4 do segundo slider" class="w-full h-full object-center rounded-sm">
         </div>
       </li>
     </ul>
   </div>
 </div>
 
-
-
-
-       
-      
-
-           <div class="lg:text-end text-center text-gray-50 border-1 lg:p-5  p-4   py-7  rounded-xl">
-          <h1 class="font-bold text-2xl lg:text-2xl">Identidade Visual Basic</h1>
-           <h2 class="mt-3 lg:w-120 w-80 m-auto ml-auto lg:ml-0 lg:text-sm italic">
+           <div class="lg:text-end text-center text-gray-50 border-1 lg:p-5 p-5 mb-10 py-7 rounded-xl lg:w-[32rem] md:w-[40rem] lg:ml-16 ">
+          <h1 class="font-bold text-2xl lg:text-2xl md:w-[35rem] md:m-auto lg:text-end lg:-ml-23 ">Identidade Visual Basic</h1>
+           <h2 class="mt-3 lg:w-125 w-80 m-auto ml-auto lg:-ml-9 lg:text-sm italic md:w-[35rem] lg:text-end font-poppins">
 
          Para quem que está começando: crie uma imagem sólida e de confiança para seu público com um <b>valor acessível</b>
           </h2>
-          <ul class="mt-5 lg:text-end">
-              <li class="lg:w-122 lg:text-sm mt-3 lg:text-end lg:ml-auto w-85 mx-auto"> <i class="fa-regular fa-square-check"></i> <b>Comunique sua marca: </b> com cores, letras e logotipo que transmitam a mensagem do teu negócio</li> 
+          <ul class="mt-5 lg:text-end lg:-ml-8 font-poppins ">
+              <li class="lg:w-122 lg:text-sm mt-3 lg:text-end lg:ml-auto w-85 mx-auto md:w-[35rem]"> <i class="fa-regular fa-square-check  "></i> <b>Comunique sua marca: </b> com cores, letras e logotipo que transmitam a mensagem do teu negócio</li> 
 
         
 
-              <li class="lg:w-122  lg:text-sm mt-3 lg:text-end lg:ml-auto w-85 mx-auto"> <i class="fa-regular fa-square-check"></i> <b>Posicionamento</b> o que torna o teu negócio diferente de todos, afinal, a sua ideia é unica ! </li>
+              <li class="lg:w-122  lg:text-sm mt-3 lg:text-end lg:ml-auto w-85 mx-auto md:w-[35rem]"> <i class="fa-regular fa-square-check"></i> <b>Posicionamento</b> o que torna o teu negócio diferente de todos, afinal, a sua ideia é unica ! </li>
 
     
           </ul>
-           <button class="rounded-2xl text-center mt-8 font-semibold text-gray-50 lg:text-sm  bg-green-700 p-2 w-80 cursor-pointer  transform hover:scale-105 hover:bg-green-500 transition duration-300 ease-in-out"> Quero fazer minha ID visual </button>
+
+            <a href="./orçamento.html">
+         <button class="rounded-2xl font-semibold text-center mt-8  p-3 w-70 lg:text-sm  text-gray-50  bg-green-700  lg:w-60 cursor-pointer  transform hover:scale-105 hover:bg-green-600 transition duration-300 ease-in-out">
+            
+        Quero fazer minha ID visual</button>
+
+        </a> 
         </div>
 
-    </div>
+    
         
       </article>
 
 
 
 
-      <article data-anime="500" class=" flex flex-col lg:flex-row justify-between items-center text-center mb-20 2xl:p-32">
-        <div class="lg:text-start text-center text-gray-50 border-1 lg:p-5 p-4  py-7 rounded-xl">
+      <article data-anime="500" class=" flex flex-col lg:flex-row justify-center items-center text-center lg:mb-10  2xl:text-center ">
+        <div class="lg:text-start text-center text-gray-50 border-1 lg:p-5 p-5  py-7 rounded-xl md:w-[35rem] ">
           <h1 class="font-bold lg:text-2xl text-2xl">Redes Sociais</h1>
-          <h2 class="lg:w-120 mt-1 lg:text-start text-center w-85 lg:text-sm italic"> Lucre com o Instagram e Facebook </h2>
-          <ul class="mt-5 lg:text-end">
-             <li class="mt-1 lg:w-120 lg:text-sm w-85 mx-auto text-start">
+          <h2 class="mt-3 lg:w-120 w-80 m-auto ml-auto lg:ml-0 lg:text-sm italic md:w-[35rem] font-poppins"> Lucre com o Instagram e Facebook </h2>
+          <ul class="mt-5 lg:text-end font-poppins">
+             <li class="mt-1 lg:w-120 lg:text-sm w-85 mx-auto text-start md:w-[35rem] ">
               <i class="fa-regular fa-square-check"></i> <b>Conexão que gera resultado: </b> interaja de maneira estratégica com seus seguidores, e veja curtidas se tornarem clientes </li>
            
-              <li class="mt-5 lg:w-120 lg:text-sm w-85 mx-auto text-start"> 
+              <li class="mt-5 lg:w-120 lg:text-sm w-85 mx-auto text-start md:w-[35rem]"> 
                 <i class="fa-regular fa-square-check"></i> <b>Não perca tempo no canva: </b> aqui nós criamos pra você desde artes digitais avulsas até pacotes, de forma personalizada sem que você perca tempo, afinal ele custa dinheiro ! </li>
 
-                  <li class="mt-5 lg:w-120 lg:text-sm w-85 mx-auto text-start">
+                  <li class="mt-5 lg:w-120 lg:text-sm w-85 mx-auto text-start md:w-[35rem]">
                     <i class="fa-regular fa-square-check"></i> <b>Planejamos pra você</b> criamos pra você um planejamento mensal com diversos benefícios que irão te poupar tempo e trazer resultados </li>
           </ul>
 
-          <button class="rounded-2xl font-semibold text-center mt-8 lg:text-sm  text-gray-50  bg-green-700 p-2 w-50 cursor-pointer  transform hover:scale-105 hover:bg-green-500 transition duration-300 ease-in-out"> Fale Conosco </button>
+ <a href="">
+          <button class="rounded-2xl font-semibold text-center mt-8 lg:text-sm  text-gray-50  bg-green-700  p-3 w-60 cursor-pointer  transform hover:scale-105 hover:bg-green-500 transition duration-300 ease-in-out"> Fale Conosco </button>
         </div>
-
+      </a>
         
  // 
   <!-- Card 1 -->
 
-     <div class="grid grid-cols-1 lg:w-full mt-8 lg:ml-5 lg:mb-10">
+     <div class="grid grid-cols-1 lg:w-full mt-8 lg:ml-5 lg:mb-10 2xl:max-w-2xl">
  
   
-    <img src="/img/redsocial.png" alt="imagem modelo rede social" class="lg:w-[70rem] lg:h-[28rem]" >
+    <img src="./img/redsocial.webp" alt="imagem modelo rede social" class="lg:w-[70rem] lg:h-[28rem]" >
      
 </div>
 
 
   <!-- <div class="w-full h-[40rem]  overflow-hidden rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
-    <img src="/img/social.png" alt="Identidade Visual" class="w-full h-full object-cover">
+    <img src="./img/social.webp" alt="Identidade Visual" class="w-full h-full object-cover">
     
  
   </div>
 <div class="w-full h-[40rem]  overflow-hidden rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300">
-      <img src="/img/phoneinst.png" alt="Identidade Visual" class="w-full h-full object-cover">
+      <img src="./img/phoneinst.webp" alt="Identidade Visual" class="w-full h-full object-cover">
     
  
   </div> -->
@@ -289,51 +417,54 @@
         </div>
       </article>
 
-      <article data-anime="500" class=" flex flex-col lg:flex-row gap-16 justify-between items-center text-center mb-20 2xl:p-32">
+      <article data-anime="500" class="flex flex-col-reverse lg:flex-row  items-center text-center lg:mb-10 ">
      <div class="grid grid-cols-1 lg:grid-cols-2 mt-8">
  
   
-    <img src="/img/conv.png" alt="Papelaria Completa" class="max-w-[40rem] h-56" >
-     <img src="/img/cell.png" alt="Convite no smartphone"  class="w-64 h-80 ml-12" >
+    <img src="./img/conv.webp" alt="Papelaria Completa" class="max-w-[40rem] h-56" >
+     <img src="./img/cell.webp" alt="Convite no smartphone"  class="w-64 h-80 ml-12" >
   </div>
   </div>
 
 
-         <div class="lg:text-end text-center text-gray-50 border-1 lg:p-5 p-2 py-7 rounded-xl">
-          <h1 class="font-bold text-2xl lg:text-2xl ">Papelaria Digital</h1>
-          <h2 class="mt-3 lg:w-120 w-80 m-auto ml-auto lg:ml-0 lg:text-sm italic"> Criamos todos os tipos de papelaria digital personalizada pra você</h2>
+           <div class="lg:text-end text-center text-gray-50 border-1 lg:p-5 p-5 mb-10 py-7 rounded-xl lg:w-[32rem] md:w-[40rem] lg:ml-16 ">
+          <h1 class="font-bold text-2xl lg:text-2xl md:w-[35rem] md:m-auto lg:text-end lg:-ml-28 ">Papelaria Digital</h1>
+           <h2 class="mt-3 lg:w-70 w-80 m-auto ml-auto  lg:text-sm italic md:w-[35rem] lg:text-end lg:ml-42 font-poppins"> Criamos todos os tipos de papelaria digital personalizada pra você</h2>
           <ul class="mt-5 lg:text-end">
-             <li class="lg:w-110 lg:text-sm mt-3 lg:text-end lg:ml-auto w-80 mx-auto"> <i class="fa-regular fa-square-check"></i> <b>Convites Digitais</b> que vão encantar seus convidados. Desde modelos simples a modelos interativos </li>
-          <li class="lg:w-110 lg:text-sm mt-3 lg:text-end lg:ml-auto w-85 mx-auto">
+             <li class="lg:w-110 lg:text-sm mt-3 lg:text-end lg:ml-auto w-80 mx-auto md:w-[35rem] font-poppins"> <i class="fa-regular fa-square-check"></i> <b>Convites Digitais</b> que vão encantar seus convidados. Desde modelos simples a modelos interativos </li>
+          <li class="lg:w-110 lg:text-sm mt-3 lg:text-end lg:ml-auto w-85 mx-auto md:w-[35rem]">
             <i class="fa-regular fa-square-check"></i> <b>Papelaria que vende:</b> desenvolvemos para você artes digitais que você pode imprimir e utilizar como ferramenta de vendas, como folders, flyers, cartões de visita e etiquetas </li>
   
           </ul>
 
-          <button class="rounded-2xl font-semibold text-center mt-8  lg:text-sm  text-gray-50  bg-green-700 p-2 w-50 cursor-pointer  transform hover:scale-105 hover:bg-green-600 transition duration-300 ease-in-out"> Chame no whatsapp </button>
+          <button class="rounded-2xl font-semibold text-center mt-8  lg:text-sm  text-gray-50  bg-green-700 p-3 w-60 cursor-pointer  transform hover:scale-105 hover:bg-green-600 transition duration-300 ease-in-out"> Chame no Whatsapp </button> 
         </div>
       </article>
 
 
     </section>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full bg-gradient-to-r from-blue-900 to-purple-900 px-10 py-15">
+
+    
+
+<div class=" grid grid-cols-1 md:grid-cols-2  items-center w-full bg-[url('./img/wave.webp')] bg-cover bg-center  lg:h-[40rem] ">
 <img
-  src="/img/us.png"
+  src="./img/us.webp"
   alt="Imagem Brainz"
-  class="w-[3] max-w-[150px] sm:max-w-[200px] md:max-w-[200px] lg:max-w-[20px] mx-auto"
+  class="w-[5] max-w-[150px] sm:max-w-[200px] md:max-w-[300px] lg:max-w-[300px] mx-auto  md:-mb-15 lg:mt-14"
 />
 
 <!-- ASSISTENTE VIRTUAL -->
-  <div>
-    <h1 class="lg:text-xl font-bold mb-4 text-gray-50">
-      Eu sou a Brainz e vou te ajudar a encontrar qual o produto é ideal para o seu negócio
+  <div class="md:mt-24 mx-auto text-center">
+    <h1 class="lg:text-xl font-bold mb-4 text-gray-50 lg:max-w-lg ">
+      Eu sou a Brainz, e vou te ajudar a descobrir qual o produto é ideal para o seu negócio
     </h1>
-    <p class="mb-6 text-purple-200 text-base">
-      Responda algumas perguntas e descubra o produto ideal para você
+    <p class="mb-4 text-purple-200 text-base lg:max-w-2xl lg:m-auto lg:text-sm">
+      Responda algumas perguntas e receba seu Orçamento
     </p>
-    <button class="bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition">
-      Clicando aqui
-    </button>
+     <a href="./orçamento.html">
+   <button class="rounded-2xl text-center mt-2 lg:mt-5 lg:text-sm font-semibold text-gray-50  bg-green-700 p-2 w-70 cursor-pointer  transform hover:scale-105 hover:bg-green-600 transition duration-300 ease-in-out mb-10 "> Clique aqui </button>
+     </a>
   </div>
 </div>
 
@@ -347,85 +478,182 @@
   Processo de <span class="bg-gradient-to-r from-blue-300 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Criação </span> da Weinsite
 </h2>
 
-<div data-anime="700" class="relative w-full">
-  <!-- Linha atrás das divs -->
-  <div class="hidden absolute top-1/2 left-10 w-250 h-px bg-gradient-to-r from-purple-600 to-pink-500 -z-10"></div>
+                <div class="py-5 backdrop-blur-md bg-white/10 rounded-2xl mt-20 fadeInUp" data-anime="300">
+          <div class="md:max-w-5xl 2xl:max-w-6xl   mx-auto px-6">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12 ">
+                  <img
+                    src="./img/us.webp"
+                    alt="ícone de ideia"
+                    class="lg:w-17 lg:h-30 w-24 h-auto mx-auto"
+                  />
+                  <h3
+                    class="text-base sm:text-lg lg:text-lg font-extrabold text-white mt-3 lg:max-w-xs lg:m-auto lg:mt-3"
+                  >
+                    Descubra qual é seu produto ideal com a Brainz
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">Responda o teste inteligente com nossa assistente virtual para descobrir a solução digital ideal pra você <a href="orçamento.html" class="font-extrabold text-pink-300"> clicando aqui</a></p>
+                    
+                  </p>
+                </div>
 
+                <!-- Slide 2 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-20 lg:h-25 w-24 h-auto mx-auto"
+                  />
+            <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Envie seu resultado e receba seu orçamento
+                  </h3>
+               <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Ao realizar o teste, será direcionado para encaminhar o
+                    resultado via whatsapp, de forma rápida e eficiente. Assim
+                    você receberá seu orçamento personalizado. Caso tiver
+                    dúvidas ou questionamentos, ficamos a disposição para uma
+                    reunião online gratuíta.
+                  </p>
+                </div>
 
-      <div  class=" mt-10 flex flex-col  lg:mt-10 lg:flex lg:flex-row lg:w-full lg:my-auto lg:justify-center lg:items-center lg:gap-10 w-80 mx-auto"> 
-        
-        <!-- ideias -->
-   
-      <div class="bg-[url('/img/backidea.png')] bg-cover bg-no-repeat rounded-2xl flex mt-10 lg:mt-0 lg:mx-auto mx-auto w-full justify-center">
-            <div class="w-50 p-5 lg:h-80 lg:w-60 lg:rounded-xl items-center text-center"> 
-              
-                <img src="/img/iconidea.png" alt="ícone de ideia" class="lg:w-32 lg:h-29 w-25 h-22  lg:mx-auto m-auto">
-                  <h1 class="lg:text-xl text-gray-50 m-auto lg:mt-3 uppercase font-extrabold text-5xs mt-2"> Ideias </h1> 
-                <p class="text-gray-50 text-center lg:text-start text-xs lg:text-xs lg:mt-2 max-w-xs mt-2">Esse é o momento em que alinhamos todos objetivos e expectativas do seu produto contratado. Por meio de <i>briefing</i> detalhado, iniciamos juntos a base do processo de criação.</p>
+                <!-- Slide 3 contrato -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-10">
+                  <img
+                    src="./img/contrato.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                  <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Contrato e Pagamento
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Essa etapa  varia de acordo com serviço contratado. 
+                    Após aprovação da proposta, enviamos um contrato detalhado se for aplicável ao
+                    serviço contratado, realizamos a assinatura digital. Após, é realizado o pagamento de acordo com o serviço e contrato, se aplicável.
+                  </p>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12  ">
+                  <img
+                    src="./img/reun.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Preparação
+                  </h3>
+                   <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Nesta reunião inicial, se aplicável ao seu produto, enviaremos pra você um formulário
+                    para alinhar todos os detalhes do serviço, etapa que varia de acordo com o o que foi contratado. Nesse
+                    momento alinharemos todas as expectativas para iniciar o seu
+                    projeto. 
+                  </p>
+                </div>
+                <!-- Slide 5 -->
+
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12">
+                  <img
+                    src="./img/desen.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Projeto e Protótipo
+                </h3>
+                    <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Aqui niciamos o processo de criação do seu produto, independente de qual for,
+                    que após finalizado, geramos pra você um protótipo para que
+                    você visualizar de maneira funcional  e
+                    realizar as alterações necessárias.
+                  </p>
+                </div>
+
+                <!-- Slide 6 -->
+
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12">
+                  <img
+                    src="./img/process.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+               <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Desenvolvimento
+                  </h3>
+               <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Assim que o protótipo/modelo é aprovado iniciamos o processo de
+                    construção. Quando finalizado, enviamos uma prévia de
+                    confirmação para testes e ajustes, dependendo do produto
+                    contratado. O prazo dessa etapa é alinhado previamente.
+                  </p>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-10">
+                  <img
+                    src="./img/web.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Ajustes Finais
+                  </h3>
+                   <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Seu produto está finalizado. Aqui você tem mais uma oportunidade de checagem e ajuste, após isso, seu produto será preparado para envio e não poderá ser solicitada alterações.
+                    Consultar condições na contratação.
+                  </p>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="./img/finish.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Produto entregue
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Momento mais esperado, seu produto está pronto. Nesse
+                    momento, te orientamos e prestamos auxílio de acordo com o
+                    serviço contratado. Além disso, prestamos suporte pós
+                    entrega a todos nossos clientes.
+                  </p>
+                </div>
               </div>
-          
-            
             </div>
-   
-            <!-- planejamento -->
+
+            <div class="flex justify-between items-center mt-6 gap-10 sm:gap-24 relative z-10">
+      <button id="customPrev"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -ml-3 sm:-ml-10 lg:-mt-90 
+        2xl:-ml-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
       
-                <div class="bg-[url('/img/backidea.png')] bg-cover bg-no-repeat rounded-2xl flex mt-10 lg:mt-0 lg:mx-auto mx-auto w-full justify-center ">
-            <div class=" w-50 p-5 lg:h-80 lg:w-60 lg:rounded-xl items-center text-center"> 
-              
-              
-                <img src="/img/desen.png" alt="ícone de desenvolvimento" class="lg:w-32 lg:h-29 lg:mx-auto w-25 h-22 m-auto">
-                  <h1 class="lg:text-xl text-gray-50 m-auto lg:mt-3 uppercase font-extrabold text-5xs mt-2"> Projeto </h1> 
-                  <p class="text-gray-50 text-center lg:text-start text-xs lg:text-xs  mt-2" >Nessa fase, iniciamos o processo de criação do seu produto, que após finalizado, geramos pra você um <i>protótipo</i> para que você visualizar de maneira funcional e realizar alterações se necessário</p>
-              </div>
-          
-            
-            </div>
- 
-            <!-- Desenvolvimento -->
-       <div class="bg-[url('/img/backidea.png')] bg-cover bg-no-repeat rounded-2xl flex mt-10 lg:mt-0  mx-auto w-full justify-center  ">
-            <div class=" w-50 p-5 lg:h-80 lg:w-65 lg:p-2 lg:rounded-xl items-center text-center"> 
-              
-              
-                <img src="/img/process.png" alt="ícone de processo" class="lg:w-32 lg:h-29 lg:mx-auto w-25 h-22 m-auto">
-                  <h1 class="lg:text-xl text-gray-50 m-auto lg:mt-3 uppercase font-extrabold text-5xs mt-2"> Desenvolvimento</h1> 
-                  <p class="text-gray-50 text-center lg:text-start lg:p-2 text-xs lg:text-xs  mt-2" >Assim que o protótipo é aprovado iniciamos o processo de construção. Quando finalizado, enviamos uma prévia para confirmação para testes e ajustes, dependendo do produto contratado. O prazo dessa etapa é alinhado previamente.</p>
-              </div>
-          
-            
-            </div>
-
-            <!-- Entrega -->
-
-  <div class="bg-[url('/img/backidea.png')] bg-cover bg-no-repeat rounded-2xl flex mt-10 lg:mt-0 lg:mx-auto w-full justify-center">
-            <div class=" w-50 p-5 lg:h-80 lg:w-60 lg:rounded-xl items-center text-center lg:py-1 "> 
-              
-              
-                <img src="/img/finish.png" alt="ícone de finalização" class="lg:w-32 lg:h-29 lg:mx-auto">
-                  <h1 class="lg:text-xl text-gray-50 m-auto lg:mt-3 uppercase font-extrabold text-shadow-lg"> Entrega </h1> 
-                  <p class="text-gray-50 text-center lg:text-start text-xs lg:text-xs  mt-2" >A fase mais esperada, o seu produto está pronto para a entrega. Nesse momento, te orientamos e prestamos auxílio de acordo com o serviço contratado. Além disso, prestamos suporte pós entrega a todos nossos clientes.</p>
-              </div>
-          
-            
-            </div>
-
-        
-
-      </div>
-
-      
-
-
-                    </div>
-                 
+      <div class="swiper-pagination !static"></div>
+      <button id="customNext"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -mr-3 sm:-mr-10 lg:-mt-90 
+        2xl:-mr-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+          </div>
+        </div>
+                <span class="flex justify-center mt-10">
+<strong class="font-light italic "> ** Consultar condições ao receber seu orçamento **</strong>
+<span>    
 
                     
 
-    </div>
-    <div data-anime="500" class=" fadeInUp mt-20 text-gray-50 lg:text-2xl font-bold">
-
-        <h1 class="text-gray-50 w-80 mx-auto lg:w-160 text-2xl"> Nosso objetivo é ter um grande INSIGHT com você </h1>
-           <button class="rounded-2xl text-center mt-4 lg:text-sm font-semibold text-gray-50  bg-green-700 p-2 w-70 cursor-pointer  transform hover:scale-105 hover:bg-green-600 transition duration-300 ease-in-out "> Fale Conosco !</button>
-    </div>
+  
                 
         </section>
 
@@ -438,100 +666,119 @@
   Perguntas Frequentes
 </h2>
 
-      <div data-anime="700" class="text-gray-50">
+      <div data-anime="700" class="text-gray-50 text-xs">
 
         
- <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85  flex items-center justify-around mb-2 lg:p-0 p-3">
-   <div class="flex items-center gap-2 ">
-    <h1 class=" lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">Qual o diferencial da Wensite?</h1>
- <i class="fas fa-chevron-down transition-transform duration-300 text-white cursor-pointer m-auto"></i>
-   </div>
- </button>
-<div class="border rounded-xs lg:w-170 m-auto w-85 p-4 text-sm text-gray-300 leading-relaxed hidden mb-2 -mt-2 border-t-0">
-       <p>Nosso diferencial é proporcionar aos nossos clientes um atendimento de excelência desde o primeiro contato até a finalização, de forma personalizada e intuitiva, promovendo por meio dos nossos serviços o sucesso do seu negócio. Nossa missão é você atingir seus objetivos ! </p>
-    </div>
- <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85  flex items-center justify-around mb-2 lg:p-0 p-3">
+ <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 flex items-center justify-around mb-4 lg:p-0 p-3">
+  <div class="flex items-center gap-2">
+    <h1 class="lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">Qual o diferencial da Wensite?</h1>
+    <i class="fas fa-chevron-down transition-transform duration-300 text-white cursor-pointer m-auto"></i>
+  </div>
+</button>
+<div class="border accordion-content overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out lg:w-170 m-auto w-85 text-sm text-gray-300 leading-relaxed -mt-2 border-t-0">
+  <div class="p-4 mb-2">
+    <p>Nosso diferencial é proporcionar aos nossos clientes um atendimento de excelência desde o primeiro contato até a finalização, de forma personalizada e intuitiva, promovendo por meio dos nossos serviços o sucesso do seu negócio. Nossa missão é você atingir seus objetivos!</p>
+  </div>
+</div>
+
+
+<button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 flex items-center justify-around mb-4 lg:p-0 p-3">
    <div class="flex items-center gap-2">
-    <h1 class=" lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">Vocês fornecem o design ao contratar um site</h1>
+    <h1 class=" lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">Vocês fornecem o design ao contratar o serviço?</h1>
  <i class="fas fa-chevron-down transition-transform duration-300 text-white cursor-pointer m-auto "></i>
    </div>
  </button>
-<div class="border rounded-xs lg:w-170 m-auto w-85 p-4 text-sm text-gray-300 leading-relaxed hidden  mb-2 -mt-2 border-t-0">
-       <p>Sim, na contratação de qualquer produto da weinsite, você tem a opção de acrescentar o serviço de criação de Design personalizado de acordo com o seu negócio e Identidade Visual.  </p>
+<div class="border accordion-content overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out lg:w-170 m-auto w-85 text-sm text-gray-300 leading-relaxed -mt-2 border-t-0">
+  <div class="p-4 mb-2">
+       <p>Possuímos diversas opções de contratação, grande parte delas esta incluso o Design. Nos chame que fazemos um orçamento personalizado pra você. </p>
     </div>
+  </div>
 
-     <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 flex items-center justify-around mb-2 lg:p-0 p-3">
-
+     <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 flex items-center justify-around mb-4 lg:p-0 p-3">
    <div class="flex items-center gap-2">
     <h1 class=" lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">O site é adaptado para computador e celular?</h1>
  <i class="fas fa-chevron-down transition-transform duration-300 text-white cursor-pointer m-auto"></i>
    </div>
  </button>
-<div class="border rounded-xs lg:w-170 m-auto w-85 p-4 text-sm text-gray-300 leading-relaxed hidden mb-2 -mt-2 border-t-0">
+<div class="border accordion-content overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out lg:w-170 m-auto w-85 text-sm text-gray-300 leading-relaxed -mt-2 border-t-0">
+  <div class="p-4 mb-2">
        <p> Com certeza, todos nossos projetos de Sites e Landing Pages são responsivos, ou seja, criados para visualização em Desktop, Tablet e Mobile.   </p>
     </div>
+  </div>
 
   
 
-        <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85  flex items-center justify-around mb-2 lg:p-0 p-3">
+       <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 flex items-center justify-around mb-4 lg:p-0 p-3">
    <div class="flex items-center gap-2">
-    <h1 class=" lg:p-5 lg:text-basetext-3sm to-purple-400 m-auto">Quanto tempo para receber o serviço contratado?</h1>
+    <h1 class=" lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">Quanto tempo para receber o serviço contratado?</h1>
  <i class="fas fa-chevron-down transition-transform duration-300 text-white cursor-pointer m-auto"></i>
    </div>
  </button>
-<div class="border rounded-xs lg:w-170 m-auto w-85 p-4 text-sm text-gray-300 leading-relaxed hidden mb-2 -mt-2 border-t-0">
+<div class="border accordion-content overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out lg:w-170 m-auto w-85 text-sm text-gray-300 leading-relaxed -mt-2 border-t-0">
+  <div class="p-4 mb-2">
        <p>      
         O prazo para entrega é calculado de acordo com o tipo de serviço contratado e sua complexidade. Nossa prioridade é entregar o melhor produto digital em um curto prazo   </p>
     </div>
+  </div>
 
 
-      <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85  flex items-center justify-around mb-2 lg:p-0 p-3">
+        <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 flex items-center justify-around mb-4 lg:p-0 p-3">
    <div class="flex items-center gap-2">
     <h1 class=" lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">Meu site vai aparecer no Google? </h1>
  <i class="fas fa-chevron-down transition-transform duration-300 text-white cursor-pointer m-auto"></i>
    </div>
  </button>
-<div class="border rounded-xs lg:w-170 m-auto w-85 p-4 text-sm text-gray-300 leading-relaxed hidden mb-2 -mt-2 border-t-0">
+<div class="border accordion-content overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out lg:w-170 m-auto w-85 text-sm text-gray-300 leading-relaxed -mt-2 border-t-0">
+  <div class="p-4 mb-2">
        <p> Sim! Todos os nossos sites são otimizados para SEO básico, garantindo que ele seja indexado pelo Google.</p>
     </div>
+  </div>
 
 
-      <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85  flex items-center justify-around mb-2 lg:p-0 p-3">
+        <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 flex items-center justify-around mb-4 lg:p-0 p-3">
    <div class="flex items-center gap-2">
     <h1 class=" lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">Como funciona a Hospedagem e Domínio?</h1>
  <i class="fas fa-chevron-down transition-transform duration-300 text-white cursor-pointer m-auto"></i>
    </div>
  </button>
-<div class="border rounded-xs lg:w-170 m-auto w-85 p-4 text-sm text-gray-300 leading-relaxed hidden mb-2 -mt-2 border-t-0">
-       <p> O domínio é o nome do seu site, o endereço que as pessoas digitam no navegador para acessar seu site. A hospedagem é o local em que sua página fica armazenada. Ambos serviços são contratados em plataformas específicas. Nós da Weinsite prestamos SUPORTE para a contratação e ajuste destes serviços sem custo adicional.  </p>
+<div class="border accordion-content overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out lg:w-170 m-auto w-85 text-sm text-gray-300 leading-relaxed -mt-2 border-t-0">
+  <div class="p-4 mb-2">
+       <p> O domínio é o nome do seu site — o endereço que as pessoas digitam no navegador para acessá-lo, como por exemplo www.seunegocio.com. Já a hospedagem é o serviço responsável por manter o site no ar, ou seja, é onde todos os arquivos e informações do seu site ficam armazenados. Ambos os serviços são contratados em plataformas específicas e costumam ter validade de um ano.
+Na Weinsite, oferecemos duas formas de atendimento para essa etapa: na opção de assinatura mensal, você não precisa se preocupar com nada disso — cuidamos do domínio, da hospedagem e da manutenção do seu site de forma completa. Mas, se preferir contratar domínio e hospedagem por conta própria, não tem problema! Nós te orientamos durante todo o processo para garantir que o seu site seja publicado corretamente. </p>
     </div>
+  </div>
 
     
-      <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85  flex items-center justify-around mb-2 lg:p-0 p-3">
+      
+        <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 flex items-center justify-around mb-4 lg:p-0 p-3">
    <div class="flex items-center gap-2">
     <h1 class=" lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">O que está incluso na Identidade Visual?</h1>
  <i class="fas fa-chevron-down transition-transform duration-300 text-white cursor-pointer m-auto"></i>
    </div>
  </button>
-<div class="border rounded-xs lg:w-170 m-auto w-85 p-4 text-sm text-gray-300 leading-relaxed hidden mb-2 -mt-2 border-t-0">
+<div class="border accordion-content overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out lg:w-170 m-auto w-85 text-sm text-gray-300 leading-relaxed -mt-2 border-t-0">
+  <div class="p-4 mb-2">
        <p>  Logo, paleta de cores, tipografia, variações de uso, manual da marca e aplicações básicas (cartão, redes sociais ou assinatura de e-mail).</p>
     </div>
+</div>  
 
  
 
-<button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 mb-2 flex items-center justify-around lg:p-0 p-3">
+ <button onclick="toggleAccordion(this)" class="bg-gradient-to-r from-purple-700 via-blue-900 border rounded-xs lg:w-170 m-auto w-85 flex items-center justify-around mb-4 lg:p-0 p-3">
    <div class="flex items-center gap-2">
     <h1 class=" lg:p-5 lg:text-base text-3sm to-purple-400 m-auto">Como consultar valores?</h1>
  <i class="fas fa-chevron-down transition-transform duration-300 text-white cursor-pointer m-auto"></i>
    </div>
  </button>
-<div class="border rounded-xs lg:w-170 m-auto w-85 p-4 text-sm text-gray-300 leading-relaxed hidden mb-2 -mt-2 border-t-0">
+<div class="border accordion-content overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out lg:w-170 m-auto w-85 text-sm text-gray-300 leading-relaxed -mt-2 border-t-0">
+  <div class="p-4 mb-2">
        <p> 
-        Nós da Weinsite possuimos duas maneiras para realização do orçamento:
-        A primeira, é a consulta direta com nossa equipe via whatsapp, onde iremos te encaminhar um link para o nosso formulário de orçamento que você irá preencher com as informações do seu negócio e receberá um retorno em até 24 horas.
-        A segunda opção, é a realização de uma conversa presencial ou online em que iremos falar sobre o seu negócio e entender melhor as suas necessidades, para assim te encaminhar um orçamento personalizado. 
-    Alguns produtos como Artes Digitais, você pode conferir em nosso Instagram os valores atualizados.  </p>
+Para facilitar a realização do seu orçamento, você conta com o auxílio da nossa assistente virtual, a Brainz. Basta preencher o formulário <a href="">clicando aqui </a> para descobrir qual é o produto ideal para o seu negócio.
+Assim que concluir, é só nos enviar o resultado pelo WhatsApp e, em poucos minutos, você receberá um orçamento totalmente personalizado.
+Caso tenha qualquer outra dúvida, é só chamar a gente no WhatsApp. Estamos prontos para te ajudar!
+      </p>
     </div>
+</div>
 
 
 
@@ -569,10 +816,12 @@
       <article data-anime="700" class=" fadeInUp mt-15">
 <h1 class="text-center font-light text-xl lg:text-xl text-white"> fale conosco </h1>
      <h2 class="text-center font-extrabold text-xl lg:text-3xl text-gray-50 mb-15" style="text-shadow: 0px 0px 2px white;">
-Entre em Contato e faça seu Orçamento
+Vamos começar o seu projeto?
 </h2>
 
-<button class="hidden lg:block text-gray-50 font-semibold bg-green-700 p-2 w-40 rounded-xl m-auto -mt-10 cursor-pointer  transform hover:scale-105 hover:bg-green-500 transition duration-300 ease-in-out lg:text-sm "> Nosso Whatsapp  </button>
+<a href="./orçamento.html">
+<button class="block text-gray-50 font-semibold bg-green-700 p-3 w-50 rounded-2xl m-auto -mt-10 cursor-pointer  transform hover:scale-105 hover:bg-green-500 transition duration-300 ease-in-out lg:text-sm "> Comece por aqui  </button>
+</a>
 
  
 
@@ -590,7 +839,7 @@ Entre em Contato e faça seu Orçamento
 
                     <div class="text-center mb-4 p-5">
                         <div class="col-lg-3 col-sm-3 mb-1 text-center m-auto">
-                            <img src=" /img/logo-nav.png" alt="logotipo footer" class="w-52 h-18 m-auto ">
+                            <img src=" ./img/logo-nav.webp" alt="logotipo footer" class="w-52 h-18 m-auto ">
                         </div>
                     
                          <div class="social-icons flex justify-center ms-8 -mt-4 gap-2">
@@ -601,7 +850,7 @@ Entre em Contato e faça seu Orçamento
                          
                             <a href="#"><i class="fa-brands fa-facebook-f hover:bg-gray-300/40 p-2 rounded-2xl transform hover:scale-105 transition duration-300 ease-in-out"" style="color: #ffffff;"></i> </i></a>
 
-                         <a> <i class="fa-brands fa-whatsapp cursor-pointer hover:bg-gray-300/40 p-2 rounded-2xl transform hover:scale-105 transition duration-300 ease-in-out"" style="color: #f9fafa;"></i> </a>
+                         <a href="https://wa.me/5551989208255" target="_blank"> <i class="fa-brands fa-whatsapp cursor-pointer hover:bg-gray-300/40 p-2 rounded-2xl transform hover:scale-105 transition duration-300 ease-in-out"" style="color: #f9fafa;"></i> </a>
                     
 
                        
@@ -616,7 +865,15 @@ Entre em Contato e faça seu Orçamento
             
  </footer>
 
+ <div
+        id="loader"
+        class="fixed inset-0 backdrop-blur-md bg-opacity-80 flex items-center justify-center z-50 hidden"
+      >
+        <img src="./img/gif.gif" alt="Carregando..." class="w-40 h-40" />
+      </div>
+    </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
  <script src="./script.js"></script>
 

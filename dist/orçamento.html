@@ -22,13 +22,18 @@
   </head>
 
   <body
-    class="font-montserrat bg-[url('/img/bgbody.jpg')] bg-cover bg-center min-h-screen flex items-center justify-center p-4"
+    class="font-montserrat bg-[url('./img/bgbody.jpg')] bg-cover bg-center min-h-screen flex items-center justify-center p-4"
   >
     <div class="bg-transparent shadow-xl rounded-lg p-8 max-w-3xl w-full">
       <!-- ✅ TELA DE BOAS-VINDAS -->
       <div id="welcome-screen" class="text-center space-y-6">
         <div>
-          <img src="/img/brainzoi.png" alt="Mascote IA" class="w-40 mx-auto" />
+          ''
+          <img
+            src="./img/brainzoi.png"
+            alt="Mascote IA"
+            class="max-w-32 mx-auto"
+          />
         </div>
 
         <p class="text-white lg:text-xl lg:max-w-xl lg:text-center mx-auto">
@@ -38,7 +43,11 @@
           poucos passos de forma rápida e prática. <br />
         </p>
 
-        <p class="text-white lg:text-xl">Vamos começar?</p>
+        <p
+          class="lg:text-xl font-extrabold text-2xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent p-2 max-w-sm m-auto"
+        >
+          Vamos começar?
+        </p>
 
         <div class="mt-2">
           <label class="inline-flex items-start mt-4">
@@ -56,7 +65,7 @@
           id="start-btn"
           class="bg-green-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition"
         >
-          Começar Orçamento
+          Responder Formulário
         </button>
       </div>
 
@@ -134,7 +143,7 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
               <label
-                class="border p-4 rounded cursor-pointer hover:bg-purple-500 text-white w-full sm:w-auto text-center"
+                class="border p-4 rounded cursor-pointer hover:bg-purple-500 active:bg-purple-500 text-white w-full sm:w-auto text-center transition-colors duration-300"
               >
                 <input
                   type="radio"
@@ -146,7 +155,7 @@
                 Sim, estou começando agora
               </label>
               <label
-                class="border p-4 rounded cursor-pointer hover:bg-purple-500 text-white w-full sm:w-auto text-center"
+                class="border p-4 rounded cursor-pointer hover:bg-purple-500 active:bg-purple-500 text-white w-full sm:w-auto text-center transition-colors duration-300"
               >
                 <input
                   type="radio"
@@ -550,6 +559,22 @@
             updateUI();
           }
         });
+
+        // Controle de seleção visual para o passo "step-inicio"
+        document
+          .querySelectorAll('input[name="inicioDigital"]')
+          .forEach((input) => {
+            input.addEventListener('change', () => {
+              document
+                .querySelectorAll('input[name="inicioDigital"]')
+                .forEach((i) => {
+                  i.parentElement.classList.remove('active');
+                });
+              if (input.checked) {
+                input.parentElement.classList.add('active');
+              }
+            });
+          });
 
         document.querySelectorAll('input[name="service"]').forEach((input) => {
           input.addEventListener('change', () => {

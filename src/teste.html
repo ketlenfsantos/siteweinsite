@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white min-h-screen flex flex-col items-start">
+    <!-- MENU -->
+    <div
+      id="teste2"
+      class="mt-20 ml-20 text-white bg-purple-600 p-2 rounded cursor-pointer relative z-50"
+    >
+      Nossos Serviços
+    </div>
+
+    <!-- MENU FLUTUANTE -->
+    <div
+      id="hoverDiv2"
+      class="hidden absolute bg-white text-black w-[400px] p-4 rounded-xl shadow-xl z-40"
+    >
+      <ul class="grid grid-cols-2 gap-2 text-sm">
+        <li class="p-2 hover:bg-gray-200 cursor-pointer">Sites</li>
+        <li class="p-2 hover:bg-gray-200 cursor-pointer">Identidade</li>
+        <li class="p-2 hover:bg-gray-200 cursor-pointer">Redes</li>
+        <li class="p-2 hover:bg-gray-200 cursor-pointer">Papelaria</li>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    const item2 = document.getElementById('teste2');
+    const hover2 = document.getElementById('hoverDiv2');
+
+    let isOverItem = false;
+    let isOverBox = false;
+    let timeoutId;
+
+    function showBox() {
+      const rect = item2.getBoundingClientRect();
+      hover2.style.top = `${rect.bottom + window.scrollY}px`;
+      hover2.style.left = `${rect.left + window.scrollX}px`;
+      hover2.classList.remove('hidden');
+    }
+
+    function hideBox() {
+      timeoutId = setTimeout(() => {
+        if (!isOverItem && !isOverBox) {
+          hover2.classList.add('hidden');
+        }
+      }, 100); // atraso pra permitir transição entre eles
+    }
+
+    item2.addEventListener('mouseenter', () => {
+      isOverItem = true;
+      clearTimeout(timeoutId);
+      showBox();
+    });
+
+    item2.addEventListener('mouseleave', () => {
+      isOverItem = false;
+      hideBox();
+    });
+
+    hover2.addEventListener('mouseenter', () => {
+      isOverBox = true;
+      clearTimeout(timeoutId);
+    });
+
+    hover2.addEventListener('mouseleave', () => {
+      isOverBox = false;
+      hideBox();
+    });
+  </script>
+</html>

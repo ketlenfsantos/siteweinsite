@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aumente suas vendas no Digital, criamos pra você Sites, Páginas de Vendas, Identidade Visual, Produtos Digitais personalizados para Redes Sociais e Papelaria. "
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
+    <link href="./output.css" rel="stylesheet" />
+
+    <title>WEINSITE - Sites e Produtos Digitais</title>
+
+    <style>
+      /* Estilo da barra de progresso */
+      .progress-bar {
+        height: 6px;
+        background-color: #4f46e5; /* Indigo-600 */
+        transition: width 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-montserrat bg-[url('./img/bgbody.jpg')] bg-cover bg-center overflow-x-hidden w-full text-white min-h-screen p-8"
+  >
+
+  <!-- Sites e Landing Pages -->
+ <section class="lg:p-25 p-10 py-10 container mb-16 h-screen text-white">
+      <h1 class="text-4xl font-bold text-center mb-10">
+        Portfólio de Criações
+      </h1>
+      <h2
+        class="text-2xl font-semibold mb-2 border-b border-purple-400 inline-block"
+      >
+        Sites e Landing Pages
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        <div class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer
+        hover:scale-105 transition"">
+
+        <img
+          src="./img/capaPortfolio.png"
+          alt="Arte Social 1"
+          class="rounded-lg cursor-pointer"
+          onclick="openModal('modalSite')"
+        />
+        <h1 class="text-center mt-10 lg:text-base font-semibold">
+          Site Portfólio Dev - Ketlen Figueiredo
+        </h1>
+      </div>
+
+      <!-- inSalute -->
+
+        <div class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer
+        hover:scale-105 transition"">
+
+        <img
+          src="./img/capainsalute.png"
+          alt="Arte Social 1"
+          class="rounded-lg cursor-pointer"
+          onclick="openModal('modalInsalute')"
+        />
+        <h1 class="text-center mt-10 lg:text-base font-semibold">
+          Site Institucional - inSalute
+        </h1>
+      </div>
+
+      <!-- Landing Page Nutri -->
+           <div class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer
+        hover:scale-105 transition"">
+
+        <img
+          src="./img/lamour.jpg"
+          alt="Arte Social 1"
+          class="rounded-lg cursor-pointer"
+          onclick="openModal('modalNutri')"
+        />
+        <h1 class="text-center mt-10 lg:text-base font-semibold">
+          Landing Page - Página de Captação de Leads - Nutrição
+        </h1>
+      </div>
+      </div>
+     
+  
+
+
+    </section>
+
+
+<!-- Identidade Visual -->
+    <section class="lg:p-25 p-10 py-10 container mb-16 h-screen text-white">
+  
+      <h2
+        class="text-2xl font-semibold mb-2 border-b border-purple-400 inline-block"
+      >
+        Identidade Visual
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 mx-auto">
+        <div class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer
+        hover:scale-105 transition"">
+
+        <img
+          src="./img/lamourCapa.png"
+          alt="Arte Social 1"
+          class="rounded-lg cursor-pointer"
+          onclick="openModal('modal1')"
+        />
+        <h1 class="text-center mt-10 lg:text-base font-semibold">
+          L'amour Esportes
+        </h1>
+      </div>
+
+       <div class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer
+        hover:scale-105 transition"">
+
+        <img
+          src="./img/insaluteCapa.png"
+          alt="Arte Social 1"
+          class="rounded-lg cursor-pointer"
+          onclick="openModal('modal2')"
+        />
+        <h1 class="text-center mt-10 lg:text-base font-semibold">
+          Clínica de Fisioterapia inSalute
+        </h1>
+      </div>
+        <div class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer
+        hover:scale-105 transition"">
+
+        <img
+          src="./img/arraupCapa.png"
+          alt="Arte Social 1" 
+          class="rounded-lg cursor-pointer"
+          onclick="openModal('modal3')"
+        />
+        <h1 class="text-center mt-10 lg:text-base font-semibold">
+          Araupp - Biomedicina Estética
+        </h1>
+      </div>
+
+<!-- id casamento -->
+       <div class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer
+        hover:scale-105 transition"">
+
+        <img
+          src="./img/capaEk.png"
+          alt="Arte Social 1" 
+          class="rounded-lg cursor-pointer"
+          onclick="openModal('modalCasamento')"
+        />
+        <h1 class="text-center mt-10 lg:text-base font-semibold">
+          Casamento - Erich e Ketlen
+        </h1>
+      </div>
+      </div>
+
+
+    </section>
+
+    <!-- ID visual -->
+
+
+
+<!-- Papelaria Digital -->
+ <section class="lg:p-25 p-10 py-10 container mb-16 mt-60 h-screen text-white">
+  
+      <h2
+        class="text-2xl font-semibold  mb-4 border-b border-purple-400 inline-block"
+      >
+        Papelaria Digital
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+        <div class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer
+        hover:scale-105 transition"">
+
+        <img
+          src="/img/capaPapelaria.png"
+          alt="Arte Social 1"
+          class="rounded-lg cursor-pointer"
+          onclick="openModal('modalKitCasamento')"
+        />
+        <h1 class="text-center mt-10 lg:text-base font-semibold">
+          Kit Digital de casamento
+        </h1>
+      </div>
+
+       <div class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer
+        hover:scale-105 transition"">
+
+        <img
+          src="/img/capaEk.png"
+          alt="Arte Social 1"
+          class="rounded-lg cursor-pointer"
+          onclick="openModal('modalManual')"
+        />
+        <h1 class="text-center mt-10 lg:text-base font-semibold">
+          Manual dos Padrinhos
+        </h1>
+      </div>
+       
+      </div>
+
+      
+
+    </section>
+
+
+    <!-- Modais -->
+     <!-- modal lamour -->
+    <div
+      id="modal1"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <!-- Botão de fechar -->
+        <button
+          onclick="closeModal('modal1')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <!-- Imagens do modal -->
+        <img
+          src="/img/pg1lamour.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="/img/pg2lamour.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="/img/pg3lamour.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+      </div>
+    </div>
+     <div
+      id="modal2"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+
+    <!-- modalInsalute -->
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <!-- Botão de fechar -->
+        <button
+          onclick="closeModal('modal2')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <!-- Imagens do modal -->
+        <img
+          src="/img/pg1insalute.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="/img/pg2insalute.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="/img/pg3insalute.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+      </div>
+    </div>
+    <div
+      id="modal3"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+
+    <!-- modalInsalute -->
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <!-- Botão de fechar -->
+        <button
+          onclick="closeModal('modal3')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <!-- Imagens do modal -->
+        <img
+          src="/img/pg1araupp.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="/img/pg2araupp.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="/img/pg3araupp.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+      </div>
+    </div>
+
+     <div
+      id="modalNutri"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+
+    <!-- modalInsalute -->
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <!-- Botão de fechar -->
+        <button
+          onclick="closeModal('modalNutri')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <!-- Imagens do modal -->
+        <img
+          src="/img/desknutri.png"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+      
+      </div>
+    </div>
+
+  
+
+
+    <!-- Modal Site e Landing Page -->
+     <!-- Site Portfólio -->
+     <div
+      id="modalSite"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <!-- Botão de fechar -->
+        <button
+          onclick="closeModal('modalSite')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <!-- Imagens do modal -->
+        <img
+          src="/img/deskport.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+       
+      </div>
+    </div>
+
+    <!-- modal Insalute -->
+     <div
+      id="modalInsalute"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <!-- Botão de fechar -->
+        <button
+          onclick="closeModal('modalInsalute')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <!-- Imagens do modal -->
+        <img
+          src="/img/desk.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+       
+      </div>
+    </div>
+    <!-- modal Casamento -->
+       <div
+      id="modalCasamento"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <!-- Botão de fechar -->
+        <button
+          onclick="closeModal('modalCasamento')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <!-- Imagens do modal -->
+        <img
+          src="/img/ekId.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="/img/ek2.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="/img/ek3.png"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+      </div>
+    </div>
+
+      
+
+    <!-- modalKitCasamento-->
+       <div
+      id="modalKitCasamento"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <!-- Botão de fechar -->
+        <button
+          onclick="closeModal('modalKitCasamento')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <!-- Imagens do modal -->
+        <img
+          src="/img/votos1.jpg"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="/img/triangulo2.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+        <img
+          src="/img/conviteInterativo3.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+
+               <img
+          src="/img/lagrimas4.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+                 <img
+          src="/img/toalete5.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+
+                  <img
+          src="/img/adesivo6.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+      </div>
+    </div>
+
+    <!-- ModalManual -->
+      <div
+      id="modalManual"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <!-- Botão de fechar -->
+        <button
+          onclick="closeModal('modalManual')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <!-- Imagens do modal -->
+        <img
+          src="/img/manualOne.jpg"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="/img/manual1.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+        
+
+               <img
+          src="/img/manual2.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+                 <img
+          src="/img/manual3.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+
+                  <img
+          src="/img/manual5.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+
+               <img
+          src="/img/manual6.jpg"
+          alt="Imagem Modal"
+          class=" w-full object-contain"
+        />
+        
+      </div>
+    </div>
+    
+     
+
+    <!-- Script -->
+    <script>
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        // Desativa o scroll da página ao abrir o modal
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+
+        // Reativa o scroll da página ao fechar o modal
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      // Fecha todos os modais ao apertar ESC
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          const modaisAbertos = document.querySelectorAll('.fixed.flex');
+          modaisAbertos.forEach((modal) => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+          });
+          // Reativa o scroll da página
+          document.body.classList.remove('overflow-hidden');
+        }
+      });
+    </script>
+  </body>
+</html>

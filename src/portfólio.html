@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aumente suas vendas no Digital, criamos pra você Sites, Páginas de Vendas, Identidade Visual, Produtos Digitais personalizados para Redes Sociais e Papelaria. "
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
+    <link href="./output.css" rel="stylesheet" />
+
+    <title>WEINSITE - Sites e Produtos Digitais</title>
+
+    <style>
+      /* Estilo da barra de progresso */
+      .progress-bar {
+        height: 6px;
+        background-color: #4f46e5; /* Indigo-600 */
+        transition: width 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-montserrat bg-[url('./img/bgbody.jpg')] bg-cover bg-center overflow-x-hidden w-full text-white p-5"
+  >
+    <a
+      href="https://wa.me/5551989208255"
+      target="_blank"
+      class="lg:w-15 lg:h-15 w-18 h-18 fixed bottom-5 right-5 z-2 bg-green-700 rounded-4xl items-center justify-center shadow-lg transform hover:scale-105 hover:bg-green-600 transition-colors duration-300 p-3 lg:p-2 border-none"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="botão flutuante de whatsapp"
+      />
+    </a>
+
+    <header class="flex justify-center lg:gap-32 gap-20 p-8">
+      <a href="./index.html">
+        <img
+          src="./img/logo-nav.webp"
+          alt="Logo do site"
+          class="w-58 h-20 mt-10 lg:w-42 lg:h-15 lg:mt-0"
+          alt="Logotipo do Header"
+        />
+      </a>
+
+      <button id="menuToggle" class="lg:hidden z-50 relative">
+        <svg
+          id="menuIcon"
+          class="w-8 h-8 mt-9 text-white transition-transform duration-300 cursor-pointer"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- navegação desktop -->
+      <nav id="menu" class="hidden lg:flex gap-10 items-center text-sm">
+        <ul class="flex p-5 gap-16">
+          <li class="cursor-pointer hover:text-purple-300">
+            <a href="./index.html"> Início</a>
+          </li>
+          <li id="teste2" class="cursor-pointer hover:text-purple-300">
+            <a href="./sobre-produtos.html"> Nossos Serviços</a>
+          </li>
+          <li class="cursor-pointer hover:text-purple-300">
+            <a href="./portfólio.html"> Portfólio</a>
+          </li>
+          <li id="teste" class="cursor-pointer hover:text-purple-300">
+            <a href="./orçamento.html">Faça o Teste </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- DIV HOVER MENU TESTE -->
+
+      <div
+        id="hoverDiv"
+        class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/12 bg-transparent text-white px-4 w-90 backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-5"
+      >
+        <!-- Texto -->
+        <p class="w-2/3 font-extrabold text-sm m-auto">
+          Olá, eu sou a Brainz!<br />
+          Vamos juntos descobrir o seu produto ideal?
+        </p>
+
+        <!-- Imagem -->
+        <img
+          src="./img/brainzoi.webp"
+          alt="imagem avatar brainz"
+          class="w-30 h-auto"
+        />
+      </div>
+
+      <!-- DIV NOSSOS SERVIÇOS
+    -->
+
+      <div
+        id="hoverDiv2"
+        class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/16 bg-transparent text-white px-4 w-[580px] backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-0"
+      >
+        <!-- Texto -->
+        <ul class="p-5 grid grid-cols-2 space-x-8">
+          <li class="p-2 cursor-pointer">
+            <a href="#sites" class="flex items-center gap-2">
+              <img src="./img/brain.png" alt="" class="h-6 inline-block" />
+              Sites e Landing Pages
+            </a>
+          </li>
+          <li class="p-2 cursor-pointer">
+            <a href="#identidade" class="flex items-center gap-2">
+              <img src="./img/brain.png" alt="" class="h-6 inline-block" />
+              Identidade Visual
+            </a>
+          </li>
+          <li class="p-2 cursor-pointer">
+            <a href="#redes" class="flex items-center gap-2">
+              <img src="./img/brain.png" alt="" class="h-6 inline-block" />
+              Redes Sociais
+            </a>
+          </li>
+          <li class="p-2 cursor-pointer">
+            <a href="#papelaria" class="flex items-center gap-2">
+              <img src="./img/brain.png" alt="" class="h-6 inline-block" />
+              Papelaria Digital
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <a href="https://wa.me/5551989208255" target="_blank">
+        <button
+          class="hidden lg:block bg-green-700 text-xs w-40 mt-2 h-10 rounded-2xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold cursor-pointer"
+        >
+          Fale Conosco
+        </button>
+      </a>
+
+      <div
+        id="mobileMenu"
+        class="menuMobs hidden max-h-0 overflow-hidden transition-all duration-500 bg-gradient-to-r from-blue-500 via-purple-900 to-pink-500 fixed top-40 left-1/2 -translate-x-1/2 w-full text-center text-white max-w-md rounded-b-lg shadow-lg z-50"
+      >
+        <ul class="">
+          <li class="hover:bg-purple-200/40 w-20 m-auto p-1 cursor-pointer">
+            Início
+          </li>
+          <li class="hover:bg-purple-200/40 w-40 m-auto p-1 cursor-pointer">
+            Nossos Serviços
+          </li>
+          <li class="hover:bg-purple-200/40 w-20 m-auto p-1 cursor-pointer">
+            Portfólio
+          </li>
+          <li
+            id="menuMobs"
+            class="hover:bg-purple-200/40 w-40 m-auto p-1 cursor-pointer"
+          >
+            Faça o teste
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="mt-10 fadeInDown" data-anime="300">
+      <div class="m-auto text-center mb-10">
+        <h1 class="text-center font-light text-xl lg:text-2xl text-white">
+          confira nosso
+        </h1>
+
+        <h2
+          class="fadeinDown text-center font-extrabold text-2xl lg:text-4xl text-gray-50 w-70 lg:w-190 mx-auto"
+        >
+          Portfólio de
+          <span
+            class="bg-gradient-to-r from-blue-300 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+          >
+            criações
+          </span>
+        </h2>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4 mb-16 px-4">
+        <button
+          class="filter-button bg-gradient-to-r from-purple-900 to-purple-500 hover:bg-purple-200 text-white font-bold py-2 px-6 rounded-full transition duration-300 hover:scale-105 cursor-pointer"
+          data-category="sites-landing-pages"
+        >
+          Sites e Landing Pages
+        </button>
+        <button
+          class="filter-button bg-gradient-to-r from-purple-900 to-purple-500 hover:bg-purple-200 text-white font-bold py-2 px-6 rounded-full transition duration-300 hover:scale-105 cursor-pointer"
+          data-category="identidade-visual"
+        >
+          Identidade Visual
+        </button>
+        <button
+          class="filter-button bg-gradient-to-r from-purple-900 to-purple-500 hover:bg-purple-200 text-white font-bold py-2 px-6 rounded-full transition duration-300 hover:scale-105 cursor-pointer"
+          data-category="papelaria-digital"
+        >
+          Papelaria Digital
+        </button>
+        <button
+          class="filter-button bg-gradient-to-r from-purple-900 to-purple-500 hover:bg-purple-200 text-white font-bold py-2 px-6 rounded-full transition duration-300 cursor-pointer hover:scale-105"
+          data-category="redes-sociais"
+        >
+          Redes Sociais
+        </button>
+      </div>
+    </section>
+
+    <div id="projects-container" class="container mx-auto -mt-20">
+      <section
+        id="sites-landing-pages"
+        class="project-section lg:p-25 p-10 py-10 mb-16 text-white"
+      >
+        <h2
+          class="text-2xl font-semibold mb-2 border-b border-purple-400 inline-block"
+        >
+          Sites e Landing Pages
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="./img/capaPortfolio.webp"
+              alt="Arte Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modalSite')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Site Portfólio
+            </h1>
+            <p class="text-center lg:text-sm font-medium">
+              Desenvolvedora Front-End
+            </p>
+          </div>
+
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="./img/capainsalute.webp"
+              alt="Arte Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modalInsalute')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Site Institucional
+            </h1>
+            <p class="text-center lg:text-sm font-medium">
+              Clínica de Fisioterapia inSalute
+            </p>
+          </div>
+
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="./img//capaNutri.webp"
+              alt="Arte Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modalNutri')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Landing Page - Página de Captação
+            </h1>
+            <p class="text-center lg:text-sm font-medium">
+              Nutricionista Aline
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="identidade-visual"
+        class="project-section lg:p-25 p-10 py-10 mb-16 text-white hidden"
+      >
+        <h2
+          class="text-2xl font-semibold mb-2 border-b border-purple-400 inline-block"
+        >
+          Identidade Visual
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 mx-auto">
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="./img/lamourCapa.webp"
+              alt="Arte Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modal1')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              L'amour Esportes
+            </h1>
+          </div>
+
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="./img/insaluteCapa.webp"
+              alt="Arte Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modal2')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Clínica de Fisioterapia inSalute
+            </h1>
+          </div>
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="./img/arraupCapa.webp"
+              alt="Arte Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modal3')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Araupp - Biomedicina Estética
+            </h1>
+          </div>
+
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="./img/capaEk.webp"
+              alt="Arte Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modalCasamento')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Casamento - Erich e Ketlen
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="papelaria-digital"
+        class="project-section lg:p-25 p-10 py-10 mb-16 text-white hidden"
+      >
+        <h2
+          class="text-2xl font-semibold mb-4 border-b border-purple-400 inline-block"
+        >
+          Papelaria Digital
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="./img/capaPapelaria.webp"
+              alt="Arte Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modalKitCasamento')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Kit Digital de casamento
+            </h1>
+          </div>
+
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="./img/capaEk.webp"
+              alt="Arte Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modalManual')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Manual dos Padrinhos
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="redes-sociais"
+        class="project-section lg:p-25 p-10 py-10 mb-16 text-white hidden"
+      >
+        <h2
+          class="text-2xl font-semibold mb-4 border-b border-purple-400 inline-block"
+        >
+          Redes Sociais
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="https://via.placeholder.com/300x200?text=Arte+Rede+Social+1"
+              alt="Arte Rede Social 1"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modalRedesSociais1')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Arte para Instagram
+            </h1>
+          </div>
+          <div
+            class="bg-purple-900/20 p-8 pb-10 rounded-2xl cursor-pointer hover:scale-105 transition"
+          >
+            <img
+              src="https://via.placeholder.com/300x200?text=Arte+Rede+Social+2"
+              alt="Arte Rede Social 2"
+              class="rounded-lg cursor-pointer"
+              onclick="openModal('modalRedesSociais2')"
+            />
+            <h1 class="text-center mt-10 lg:text-base font-semibold">
+              Design para Facebook
+            </h1>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div
+      id="modal1"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modal1')"
+          class="absolute -top-1 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/pg1lamour.webp"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="./img/pg2lamour.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/pg3lamour.webp"
+          alt="Imagem Modal"
+          class="w-full object-contain mb-10 rounded-b-2xl"
+        />
+      </div>
+    </div>
+    <div
+      id="modal2"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modal2')"
+          class="absolute -top-1 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/pg1insalute.webp"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="./img/pg2insalute.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/pg3insalute.webp"
+          alt="Imagem Modal"
+          class="rounded-b-2xl w-full object-contain mb-16"
+        />
+      </div>
+    </div>
+    <div
+      id="modal3"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modal3')"
+          class="absolute -top-2 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/pg1araupp.webp"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="./img/pg2araupp.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/pg3araupp.webp"
+          alt="Imagem Modal"
+          class="rounded-b-2xl w-full object-contain mb-10"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalNutri"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalNutri')"
+          class="absolute -top-1 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/desknutri.webp"
+          alt="Imagem Modal"
+          class="w-full object-contain rounded-t-2xl"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalSite"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalSite')"
+          class="absolute -top-1 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/deskport.webp"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalInsalute"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalInsalute')"
+          class="absolute -top-1 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/desk.webp"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+      </div>
+    </div>
+    <div
+      id="modalCasamento"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalCasamento')"
+          class="absolute -top-1 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/ekId.webp"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="./img/ek2.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/ek3.webp"
+          alt="Imagem Modal"
+          class="rounded-b-2xl w-full object-contain"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalKitCasamento"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalKitCasamento')"
+          class="absolute -top-2 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/votos1.webp"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="./img/triangulo2.webp"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/conviteInterativo3.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+
+        <img
+          src="./img/lagrimas4.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/toalete5.webp"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+
+        <img
+          src="./img/adesivo6.webp"
+          alt="Imagem Modal"
+          class="w-full object-contain mb-4 rounded-b-2xl"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalManual"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalManual')"
+          class="absolute -top-1 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+        <img
+          src="./img/manualOne.jpg"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="./img/manual1.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/manual2.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/manual3.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/manual5.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/manual6.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain mb-4 rounded-b-2xl"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalRedesSociais1"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalRedesSociais1')"
+          class="absolute -top-1 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+        <img
+          src="https://via.placeholder.com/600x400?text=Arte+Rede+Social+Detalhe+1"
+          alt="Detalhe Rede Social 1"
+          class="rounded-t-2xl w-full object-contain"
+        />
+      </div>
+    </div>
+    <div
+      id="modalRedesSociais2"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalRedesSociais2')"
+          class="absolute -top-1 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+        <img
+          src="https://via.placeholder.com/600x400?text=Arte+Rede+Social+Detalhe+2"
+          alt="Detalhe Rede Social 2"
+          class="rounded-t-2xl w-full object-contain"
+        />
+      </div>
+    </div>
+
+    <script>
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+      }
+
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          const modaisAbertos = document.querySelectorAll('.fixed.flex');
+          modaisAbertos.forEach((modal) => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+          });
+          document.body.classList.remove('overflow-hidden');
+        }
+      });
+
+      // Lógica para o filtro de categorias
+      document.addEventListener('DOMContentLoaded', () => {
+        // Animação com Intersection Observer
+        const items = document.querySelectorAll('[data-anime]');
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('anime');
+              } else {
+                entry.target.classList.remove('anime');
+              }
+            });
+          },
+          {
+            threshold: 0.2,
+          },
+        );
+        items.forEach((item) => observer.observe(item));
+
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const projectSections = document.querySelectorAll('.project-section');
+
+        // Função para mostrar a seção selecionada e esconder as outras
+        function showCategory(category) {
+          projectSections.forEach((section) => {
+            if (section.id === category) {
+              section.classList.remove('hidden');
+            } else {
+              section.classList.add('hidden');
+            }
+          });
+        }
+
+        // Adiciona evento de clique a cada botão de filtro
+        filterButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            const categoryToShow = button.dataset.category;
+            showCategory(categoryToShow);
+          });
+        });
+
+        // Mostra a primeira categoria por padrão ao carregar a página
+        if (projectSections.length > 0) {
+          showCategory(projectSections[0].id);
+        }
+      });
+    </script>
+  </body>
+</html>

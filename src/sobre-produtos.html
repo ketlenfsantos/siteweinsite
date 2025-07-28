@@ -1,0 +1,2386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aumente suas vendas no Digital, criamos pra você Sites, Páginas de Vendas, Identidade Visual, Produtos Digitais personalizados para Redes Sociais e Papelaria. "
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+   
+
+    <title>Nossos Serviços | WEINSITE </title>
+
+    <style>
+      /* Estilo da barra de progresso */
+      .progress-bar {
+        height: 6px;
+        background-color: pinmk; /* Indigo-600 */
+        transition: width 0.3s ease;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #a855f7; /* cor desejada */
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+      }
+
+      /* Dentro do contêiner */
+      .swiper-button-prev {
+        left: -10px;
+        width: 10px;
+        height: 10px;
+      }
+
+      .swiper-button-next {
+        right: 10px;
+      }
+
+      /* Bullet ativo */
+      .swiper-pagination-bullet-active {
+        background-color: #a855f7;
+      }
+
+      /* Bullets inativos (opcional para suavizar) */
+      .swiper-pagination-bullet {
+        background-color: #555;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-montserrat bg-[url('./img/bgbody.jpg')] bg-cover bg-center overflow-x-hidden w-full text-white p-5"
+  >
+   <a href="https://wa.me/5551989208255" target="_blank" class="lg:w-15 lg:h-15 w-18 h-18  fixed bottom-5 right-5 z-2 bg-green-700 rounded-4xl  items-center justify-center shadow-lg transform hover:scale-105 hover:bg-green-600 transition-colors duration-300 p-3 lg:p-2 border-none">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="botão flutuante de whatsapp">
+        </a>
+
+  <header class="flex justify-center lg:gap-32  gap-20  p-8">
+    <a href="./index.html">
+    <img src="./img/logo-nav.webp" alt="Logo do site" class="w-58 h-20 mt-10 lg:w-42 lg:h-15 lg:mt-0" alt="Logotipo do Header" /> </a>
+
+ <button id="menuToggle" class="lg:hidden z-50 relative ">
+  <svg id="menuIcon" class="w-8 h-8 mt-9  text-white transition-transform duration-300 cursor-pointer" fill="none"
+    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
+  
+  <!-- navegação desktop -->
+    <nav id="menu" class="hidden lg:flex gap-10 items-center text-sm"> <ul class="flex p-5 gap-16">
+      <li class="cursor-pointer hover:text-purple-300"> <a href="./index.html"> Início</a></li>
+       <li id="teste2" class="cursor-pointer hover:text-purple-300"> <a href="./sobre-produtos.html"> Nossos Serviços</a></li>
+       <li class="cursor-pointer hover:text-purple-300"> <a href="./portfólio.html"> Portfólio</a></li>
+       <li id="teste" class="cursor-pointer hover:text-purple-300"> <a href="./orçamento.html">Faça o Teste </a>
+
+       </li>
+    </ul></nav>
+
+   <!-- DIV HOVER MENU TESTE -->
+
+ <div id="hoverDiv" class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/12 bg-transparent  text-white px-4  w-90 backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-5">
+    
+    <!-- Texto -->
+    <p class="w-2/3 font-extrabold text-sm m-auto">
+      Olá, eu sou a Brainz!<br />
+      Vamos juntos descobrir o seu produto ideal?
+    </p>
+
+    <!-- Imagem -->
+    <img src="./img/brainzoi.webp" alt="imagem avatar brainz" class="w-30   h-auto">
+  </div>
+
+  <!-- DIV NOSSOS SERVIÇOS
+    -->
+
+  <div id="hoverDiv2" class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/16 bg-transparent  text-white px-4  w-[580px] backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-0">
+    
+    <!-- Texto -->
+<ul class="p-5 grid grid-cols-2 space-x-8">
+  <li class="p-2 cursor-pointer">
+    <a href="#sites" class="flex items-center gap-2">
+      <img src="./img/brain.png" alt="" class="h-6 inline-block"> Sites e Landing Pages
+    </a>
+  </li>
+  <li class="p-2 cursor-pointer">
+    <a href="#identidade" class="flex items-center gap-2">
+      <img src="./img/brain.png" alt="" class="h-6 inline-block"> Identidade Visual
+    </a>
+  </li>
+  <li class="p-2 cursor-pointer">
+    <a href="#redes" class="flex items-center gap-2">
+      <img src="./img/brain.png" alt="" class="h-6 inline-block"> Redes Sociais
+    </a>
+  </li>
+  <li class="p-2 cursor-pointer">
+    <a href="#papelaria" class="flex items-center gap-2">
+      <img src="./img/brain.png" alt="" class="h-6 inline-block"> Papelaria Digital
+    </a>
+  </li>
+</ul>
+
+  </div>
+
+
+  <a href="https://wa.me/5551989208255" target="_blank" >
+    <button class="hidden lg:block bg-green-700 text-xs w-40 mt-2 h-10 rounded-2xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold cursor-pointer">
+  Fale Conosco
+    </button>
+  </a>
+
+     <div id="mobileMenu" class="menuMobs hidden max-h-0 overflow-hidden transition-all duration-500 bg-gradient-to-r from-blue-500 via-purple-900 to-pink-500 fixed top-40 left-1/2 -translate-x-1/2 w-full text-center text-white  max-w-md rounded-b-lg shadow-lg z-50">
+      <ul class="">
+        <li class="hover:bg-purple-200/40 w-20 m-auto  p-1 cursor-pointer">Início</li>
+        <li class="hover:bg-purple-200/40 w-40 m-auto  p-1 cursor-pointer">Nossos Serviços</li>
+        <li class="hover:bg-purple-200/40 w-20 m-auto p-1 cursor-pointer">Portfólio</li>
+        <li id="menuMobs" class="hover:bg-purple-200/40 w-40 m-auto p-1 cursor-pointer">Faça o teste</li>
+      </ul>
+
+      
+    </div>
+    
+  </header>
+
+  
+    <section class="mt-10 fadeInDown" data-anime="300">
+      <div class="m-auto text-center">
+        <h1 class="text-center font-light text-xl lg:text-2xl text-white">
+          nossos serviços
+        </h1>
+
+        <h2
+          class="fadeinDown text-center font-extrabold text-2xl lg:text-4xl text-gray-50 w-70 lg:w-190 mx-auto"
+        >
+          Que vão
+          <span
+            class="bg-gradient-to-r from-blue-300 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+          >
+            potencializar </span
+          >o seu negócio
+        </h2>
+        <p class="mt-4 text-sm lg:text-base max-w-lg m-auto">
+          Transformamos ideias em resultados - um conjunto de serviços que de
+          forma estratégica irão superar suas expectativas
+        </p>
+      </div>
+      <!-- Div Seleção serviços -->
+      <div class="flex flex-wrap justify-center gap-4 mb-16 px-4 mt-20">
+        <button
+          class="filter-button bg-gradient-to-r from-purple-900 to-purple-500 hover:bg-purple-200   text-white font-bold py-2 px-6 rounded-full transition duration-300 hover:scale-105 cursor-pointer"
+          data-category="sites-landing-pages"
+        >
+
+        
+          Sites e Landing Pages
+        </button>
+        <button
+          class="filter-button bg-gradient-to-r from-purple-900 to-purple-500 hover:bg-purple-200   text-white font-bold py-2 px-6 rounded-full transition duration-300 hover:scale-105 cursor-pointer"
+          data-category="identidade-visual"
+        >
+          Identidade Visual
+        </button>
+         <button
+          class="filter-button bg-gradient-to-r from-purple-900 to-purple-500 hover:bg-purple-200   text-white font-bold py-2 px-6 rounded-full transition duration-300 hover:scale-105 cursor-pointer"
+          data-category="papelaria-digital"
+        >
+          Papelaria Digital
+        </button>
+        <button
+          class="filter-button bg-gradient-to-r from-purple-900 to-purple-500 hover:bg-purple-200    text-white font-bold py-2 px-6 rounded-full transition duration-300 cursor-pointer  hover:scale-105"
+          data-category="redes-sociais"
+        >
+          Redes Sociais
+        </button>
+      </div>
+    </section>
+
+
+    <!-- SESSÃO LANDING PAGE -->
+    <div id="projects-container" class="container mx-auto fadeInLeft -mt-20" data-anime="300">
+       <!-- SESSÃO LANDING PAGE -->
+      <section
+        id="sites-landing-pages"
+        class="project-section lg:p-25 mt-40 lg:mt-5 mb-16 text-white"
+      >
+        <p class="italic lg:text-base text-sm ">
+          A vitrine completa da sua marca no digital.
+        </p>
+        <h2 class="lg:text-4xl text-2xl font-extrabold mb-2 inline-block">
+          Sites e Landing Pages
+        </h2>
+
+        <p class="text-base">
+          Já imaginou o seu negócio estar ativo 24 horas por dia os 7 dias da
+          semana?
+        </p>
+
+        <span class="font-bold"> </span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 text-white">
+          <!-- Site Institucional -->
+          <div
+            class="p-6 rounded-2xl bg-gradient-to-b from-purple-600 to-fuchsia-700 shadow-lg"
+          >
+            <h3 class="text-xl font-extrabold mb-2">🌐 Sites</h3>
+            <p class="mb-3 text-sm">
+              Um Site é a base da sua presença online. É onde sua marca ganha
+              autoridade, apresenta seus produtos ou serviços com clareza e
+              transmite confiança ao público. Uma ferramenta poderosa para criar
+              confiança e aparecer nos mecanismos de buscas de potenciais
+              clientes.
+            </p>
+
+            <h4 class="mb-3 font-bold text-base">Confira nossas opções:</h4>
+            <ul class="space-y-3">
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Site Institucional 🏢
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    A opção perfeita para apresentar o seu negócio. Um site
+                    institucional é o ideal para apresentar seus serviços e
+                    construir autoridade com uma navegação clara e confiável, é
+                    a sua vitrine no online para conquistar novos clientes e
+                    aumentar suas vendas. Um site contém várias páginas, cada
+                    uma dedicada a diferentes seções, como “Sobre”, “Serviços”,
+                    “Portfólio”, “Blog” e “Contato”, além de ferramentas como
+                    formulário para captar leads, mapa para encontrar seu
+                    estabelecimento e botões interativos que irão direcionar o
+                    cliente até você
+                  </p>
+
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      De pequeno a grandes negócios que buscam aumentar sua
+                      visibilidade e alcance:
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Negócios que possuam estabelecimento físico
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais Autônomos que querem atrair clientes via
+                      plataformas como Google
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Site Portfólio 📢
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    Um site portfólio é uma ferramenta essencial para
+                    profissionais de diversas áreas, como designers, fotógrafos,
+                    escritores, desenvolvedores e artistas, que desejam exibir
+                    seus melhores trabalhos de forma organizada e acessível.
+                    Mais do que uma simples galeria de projetos, ele funciona
+                    como um cartão de visitas digital, permitindo que potenciais
+                    clientes, empregadores ou colaboradores conheçam suas
+                    habilidades, estilo e experiência.
+                  </p>
+
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais que precisam exibir catálogo de produtos
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Site One Page 🎯
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    A One Page é uma solução compacta e eficiente para
+                    apresentar informações de forma direta e concisa. Ao invés
+                    de múltiplas páginas com links de navegação internos, todo o
+                    conteúdo é organizado em uma única página longa, que o
+                    usuário pode rolar para baixo e acessar as principais
+                    informações. Serviço ideal para quem está iniciando.
+                  </p>
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais que estão começando no digital e querem um
+                      investimento de menor custo
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais prestadores de serviços
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais autônomos
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <!-- <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Site com Loja Virtual (E-commerce) 🛒
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  Venda seus produtos 24h por dia! Um e-commerce completo para
+                  você gerar vendas automáticas com segurança e facilidade de
+                  gestão.
+                </div>
+              </li> -->
+            </ul>
+
+                   <button
+      class="bg-gradient-to-r from-purple-500 to-purple-800  text-white px-4 py-3 rounded-xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold lg:w-[15rem] mt-10 w-80 cursor-pointer"
+      
+    >
+    <a href="orçamento.html" class='cursor-pointer text-sm leading-none'>
+  Confira o nosso Portófilio
+</a>
+    </button>
+          </div>
+
+          <!-- Landing Page -->
+          <div
+            class="p-6 rounded-2xl bg-gradient-to-b from-purple-600 to-fuchsia-700 shadow-lg"
+          >
+            <h3 class="text-xl font-extrabold mb-2">🚀 Landing Page</h3>
+            <p class="mb-3 text-sm">
+              A landing page é uma página única e altamente focada em uma ação
+              específicade acordo com seus objetivos e metas. O design é todo
+              direcionado. Ela combina elementos de copywriting, design atrativo
+              e gatilhos mentais para transformar visitantes em oportunidades
+              reais de negócio.
+            </p>
+
+            <h4 class="mb-3 font-bold text-base">Confira nossas opções:</h4>
+
+            <ul class="space-y-3">
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold "
+                >
+                  Página de Vendas 🛍️
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-3">
+                    Feita para transformar visitantes em clientes. Com foco
+                    total em destacar seu produto, remover objeções e conduzir à
+                    compra com alta conversão. É ideal para direcionar tráfego
+                    de campanhas de marketing (anúncios, e-mail marketing) para
+                    uma página otimizada que descreve os benefícios do produto,
+                    supera objeções e tem um único objetivo claro: levar o
+                    visitante a realizar a compra imediatamente.
+                  </p>
+
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Empresas e profissionais que desejam vender um produto ou
+                      serviço específico online.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Página de Captura de Leads ✉️
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    Construa sua base de contatos! Essa página é perfeita para
+                    oferecer algo de valor em troca das informações do visitante
+                    (geralmente e-mail e nome), como e-books gratuitos,
+                    webinars, cupons de desconto, planilhas ou acesso a conteúdo
+                    exclusivo. O objetivo principal é iniciar um relacionamento
+                    e nutrir esses leads para futuras vendas.
+                  </p>
+
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Qualquer empresa ou profissional que busca construir uma
+                      lista de contatos (leads) qualificados.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Página de Lançamento 🚀
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    O palco perfeito para divulgar um novo produto ou serviço.
+                    Cria urgência, desejo e engajamento com timers, bônus e
+                    gatilhos de escassez. Essa página visa gerar expectativa,
+                    apresentar a novidade e, muitas vezes, coletar e-mails de
+                    interessados para nutrir leads antes, durante e após o
+                    lançamento oficial, construindo uma audiência engajada.
+                  </p>
+
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Criadores de produtos e infoprodutos,
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Pré-Lançamento ou Lançamento de Cursos, Eventos ou
+                      Serviços
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Página de Conversão 🎯
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    Empresas e profissionais que querem que o visitante realize
+                    uma ação específica e mensurável, que vai além da venda
+                    direta ou da captura de e-mails. Pode ser o download de um
+                    material, o preenchimento de um formulário de orçamento, a
+                    solicitação de uma demonstração, a inscrição em um evento
+                    gratuito ou qualquer outra ação que represente um passo
+                    adiante no funil de vendas. O foco é otimizar a página para
+                    maximizar essa ação desejada.
+                  </p>
+
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais com foco em agendamentos
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Solicitações de Orçamento
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="py-5 backdrop-blur-md bg-white/10 rounded-2xl mt-20 fadeInUp" data-anime="300">
+          <div class="md:max-w-5xl 2xl:max-w-6xl   mx-auto px-6">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12 ">
+                  <img
+                    src="./img/us.webp"
+                    alt="ícone de ideia"
+                    class="lg:w-17 lg:h-30 w-24 h-auto mx-auto"
+                  />
+                  <h3
+                    class="text-base sm:text-lg lg:text-lg font-extrabold text-white mt-3 lg:max-w-xs lg:m-auto lg:mt-3"
+                  >
+                    Descubra qual é seu produto ideal com a Brainz
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">Responda o teste inteligente com nossa assistente virtual para descobrir a solução digital ideal pra você <a href="orçamento.html" class="font-extrabold text-pink-300"> clicando aqui</a></p>
+                    
+                  </p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-20 lg:h-25 w-24 h-auto mx-auto"
+                  />
+            <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Envie seu resultado e receba seu orçamento
+                  </h3>
+               <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Ao realizar o teste, será direcionado para encaminhar o
+                    resultado via whatsapp, de forma rápida e eficiente. Assim
+                    você receberá seu orçamento personalizado. Caso tiver
+                    dúvidas ou questionamentos, ficamos a disposição para uma
+                    reunião online gratuíta.
+                  </p>
+                </div>
+
+                <!-- Slide 3 contrato -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-10">
+                  <img
+                    src="./img/contrato.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                  <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Contrato e Pagamento
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Após aprovação da proposta, enviamos um contrato detalhado
+                    com todas as informações relacionadas a contratação de
+                    nossos serviços. Realizamos a assinatura digital que é
+                    válida judicialmente. O pagamento poderá ser feito via Pix
+                    ou link de pagamento, de acordo como for acordado em
+                    contrato.
+                  </p>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12  ">
+                  <img
+                    src="./img/reun.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Reunião de Briefing
+                  </h3>
+                   <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Nesta reunião inicial, enviaremos pra você um formulário
+                    para alinhar todos os detalhes do projeto contratado. Nesse
+                    momento alinharemos todas as expectativas para iniciar o seu
+                    projeto.
+                  </p>
+                </div>
+                <!-- Slide 5 -->
+
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12">
+                  <img
+                    src="./img/desen.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Projeto e Protótipo
+                </h3>
+                    <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Nessa fase, iniciamos o processo de criação do seu produto,
+                    que após finalizado, geramos pra você um protótipo para que
+                    você visualizar de maneira funcional o seu produto e
+                    realizar as alterações necessárias.
+                  </p>
+                </div>
+
+                <!-- Slide 6 -->
+
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12">
+                  <img
+                    src="./img/process.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+               <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Desenvolvimento
+                  </h3>
+               <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Assim que o protótipo é aprovado iniciamos o processo de
+                    construção. Quando finalizado, enviamos uma prévia de
+                    confirmação para testes e ajustes, dependendo do produto
+                    contratado. O prazo dessa etapa é alinhado previamente.
+                  </p>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-10">
+                  <img
+                    src="./img/web.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Envio para hospedagem e realização de testes
+                  </h3>
+                   <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Seu produto está finalizado. Enviaremos para a hospedagem e
+                    realizamos os testes. Esse é o momento para você analisar as
+                    funcionalidades e solicitar as alterações necessárias.
+                  </p>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="./img/finish.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Produto entregue
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Momento mais esperado, seu produto está pronto. Nesse
+                    momento, te orientamos e prestamos auxílio de acordo com o
+                    serviço contratado. Além disso, prestamos suporte pós
+                    entrega a todos nossos clientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center mt-6 gap-10 sm:gap-24 relative z-10">
+      <button id="customPrev"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -ml-3 sm:-ml-10 lg:-mt-90 
+        2xl:-ml-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <div class="swiper-pagination !static"></div>
+      <button id="customNext"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -mr-3 sm:-mr-10 lg:-mt-90 
+        2xl:-mr-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+          </div>
+        </section>
+                <span class="flex justify-center mt-10">
+<strong class="font-light italic "> ** Consultar condições ao receber seu orçamento **</strong>
+<span>
+      </section>
+
+       <!-- SESSÃO IDENTIDADE VISUAL -->
+      <section
+        id="identidade-visual"
+        class="project-section lg:p-25 p-1 py-10 lg:mt-5 mt-32 mb-16 text-white hidden"
+      >
+
+       <p class="italic lg:text-base text-sm">
+         O primeiro passo para o reconhecimento da sua marca
+        </p>
+        <h2 class="lg:text-4xl text-2xl font-extrabold mb-2 inline-block">
+          Identidade Visual
+        </h2>
+
+        <p class="text-base">
+        Profissionalize sua marca, conquiste seu público com uma identidade visual completa e feita pra você !
+        </p>
+
+        <span class="font-bold"> </span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 text-white">
+          
+          <div
+            class="p-6 rounded-2xl bg-gradient-to-b from-purple-600 to-fuchsia-700 shadow-lg"
+          >
+            <h3 class="text-xl font-extrabold mb-2"> 🖌️ Identidade Visual Basic Weinsite</h3>
+            <p class="mb-3 text-sm ">
+              
+              Fazer uma identidade visual é muito mais do que ter um logotipo bonito. É uma estratégia fundamental para o reconhecimento, diferenciação no mercado e construção de confiança e credibilidade do seu negócio. Aqui na Weinsite, nosso foco é proporcionar a quem está começando no digital uma identidade visual completa, com tudo que você precisa.
+
+        
+            </p>
+
+            <h4 class="mb-3 font-bold"> O que entregamos: </h4>
+            <ul class="space-y-3">
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  💡 Logotipo
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                  É a representação visual de uma empresa, produto, serviço ou indivíduo. Ele é a peça central da identidade visual e a face da marca, a primeira coisa que vem à mente quando se pensa nela.
+                  </p>
+
+                </div>
+              </li>
+
+                <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  🏷️ Submarca
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                   Uma variação do seu logotipo em formato redondo.
+                  </p>
+
+                  
+                </div>
+              </li>
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  🅰️ Tipografia
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                   A tipografia é a arte e técnica de arranjar e apresentar o texto de forma visualmente atraente, legível e eficaz. Muito além da escolha de uma "fonte bonita", ela é um pilar essencial da comunicação visual e tem um impacto profundo em como uma mensagem é recebida e percebida.
+                  </p>
+
+                  
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                 🎨Paleta de Cores
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                   São as cores selecionadas para representar a marca. As cores não são escolhidas aleatoriamente; elas transmitem emoções, valores e podem influenciar a percepção do público (por exemplo, azul para confiança, verde para natureza, vermelho para paixão). A paleta define as cores primárias e secundárias que serão usadas em todos os materiais da marca.
+                  </p>
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais que estão começando no digital e querem um
+                      investimento de menor custo
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais prestadores de serviços
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais autônomos
+                    </li>
+                  </ul>
+                </div>
+              </li>
+               <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                 🖍️Padrões de Design
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                  Ajustamos pra você backgrouns, símbolos, detalhes que irão agregar a sua marca.
+
+                  </p>
+                  
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                 📘 Mini Guia de Aplicação
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                   Criamos pra você um guia com toda a sua identidade visual, com direcionamento de como utilizar e com todas as informações e arquivos.
+
+                  </p>
+                  
+                </div>
+              </li>
+
+              
+
+            
+            </ul>
+
+             <button
+      class="bg-gradient-to-r from-purple-500 to-purple-800  text-white px-4 py-3 rounded-xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold lg:w-[22rem] mt-10 w-70 cursor-pointer"
+      
+    >
+    <a href="orçamento.html" class='cursor-pointer text-sm leading-none'>
+  Confira o Portófolio de ID visual
+</a>
+    </button>
+          </div>
+
+          <!-- material adicional -->
+          <div
+            class="p-4 rounded-2xl  shadow-lg  border-1 border-white backdrop-blur-lg  lg:mt-16  "
+          >
+            <h3 class="text-xl font-extrabold mb-2 m-auto">Materiais Adicionais</h3>
+            <p class="mb-3 text-sm">
+              Para compor a sua identidade visual, possuímos as opções de Papelaria Digital, que irão agregar a sua marca de acordo com o seu nicho. 
+            </p>
+
+            <h4 class="mb-3 font-bold">Confira nossas opções:</h4>
+
+            <ul class="space-y-3">
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Cartão de Visita
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-3">
+                   Mesmo na era digital, o cartão de visita permanece como uma ferramenta de networking e marketing extremamente relevante e, em muitos casos, ideal. Ele transcende a tela do celular e oferece uma experiência tátil e pessoal, importante para seu uso no dia a dia. Criamos para você o arquivo digital pronto para impressão ou para uso no Online.
+                  </p>
+
+                  
+                </div>
+              </li>
+
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Flyers e Folders
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                  Esses materiais impressos oferecem uma forma tangível de engajar o público, seja com uma mensagem rápida e direta (flyer) ou com informações mais aprofundadas e organizadas (folder). Eles complementam a estratégia digital e são ótimos para gerar leads e fortalecer o reconhecimento da marca no mundo físico. São ferramentas de uso tanto no digital como no presencial
+                  </p>
+
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                    Comerciantes Locais: Lojas de varejo, restaurantes, cafeterias, padarias, salões de beleza. Ideais para anunciar promoções do dia, happy hours, novos produtos ou serviços.
+                    </li>
+
+                      <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Organizadores de Eventos: Para shows, palestras, workshops, feiras, festas ou eventos beneficentes. Perfeitos para divulgar data, horário, local e atração principal.
+                    </li>
+
+                     <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Empreendedores Individuais/Serviços Rápidos: Professores particulares, personal trainers, dog walkers, diaristas. Úteis para divulgar um serviço específico e contatos de forma prática.
+                    </li>
+
+                      <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Campanhas Políticas ou Sociais: Para divulgar mensagens-chave, datas de eventos ou informações de contato de candidatos/causas.
+                    </li>
+
+                    
+                      <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Empresas de Entrega/Delivery: Para menus rápidos, serviços de entrega de gás/água ou farmácias.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Papel Timbrado
+
+
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    Item essencial para documentos oficiais, propostas comerciais, orçamentos, contratos, cartas e comunicados. Confere seriedade, padroniza a comunicação e reforça a marca em cada interação escrita. Importante para o uso no âmbito presencial.
+                  </p>
+
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Advogados: Para contratos, pareceres jurídicos, petições e correspondências com clientes e tribunais.
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Consultores: Para propostas de serviço, relatórios de consultoria e cartas de recomendação.
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                     Arquitetos e Engenheiros: Para projetos, orçamentos, memoriais descritivos e laudos técnicos.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Blocos de Anotações/Receituários
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                   Utensílio útil no dia a dia do escritório ou para presentear clientes, mantendo a marca presente de forma sutil e funcional. Para profissionais da saúde, é um item obrigatório para prescrições.
+                  </p>
+
+                  <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Profissionais com foco em agendamentos
+                    </li>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Solicitações de Orçamento
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="py-5 backdrop-blur-md bg-white/10 rounded-2xl mt-20">
+          <div class="md:max-w-5xl 2xl:max-w-6xl   mx-auto px-6">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12 ">
+                  <img
+                    src="./img/us.webp"
+                    alt="ícone de ideia"
+                    class="lg:w-17 lg:h-30 w-24 h-auto mx-auto"
+                  />
+                  <h3
+                    class="text-base sm:text-lg lg:text-lg font-extrabold text-white mt-3 lg:max-w-xs lg:m-auto lg:mt-3"
+                  >
+                    Descubra qual é seu produto ideal com a Brainz
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">Responda o teste inteligente com nossa assistente virtual para descobrir a solução digital ideal pra você <a href="orçamento.html" class="font-extrabold text-pink-300"> clicando aqui</a></p>
+                    
+                  </p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-20 lg:h-25 w-24 h-auto mx-auto"
+                  />
+            <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Envie seu resultado e receba seu orçamento
+                  </h3>
+               <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Ao realizar o teste, será direcionado para encaminhar o
+                    resultado via whatsapp, de forma rápida e eficiente. Assim
+                    você receberá seu orçamento personalizado. Caso tiver
+                    dúvidas ou questionamentos, ficamos a disposição para uma
+                    reunião online gratuíta.
+                  </p>
+                </div>
+
+                <!-- Slide 3 contrato -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-10">
+                  <img
+                    src="./img/contrato.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                  <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Contrato e Pagamento
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Após aprovação da proposta, enviamos um contrato detalhado
+                    com todas as informações relacionadas a contratação de
+                    nossos serviços. Realizamos a assinatura digital que é
+                    válida judicialmente. O pagamento poderá ser feito via Pix
+                    ou link de pagamento, de acordo como for acordado em
+                    contrato.
+                  </p>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12  ">
+                  <img
+                    src="./img/reun.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Reunião de Briefing
+                  </h3>
+                   <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Nesta reunião inicial, enviaremos pra você um formulário
+                    para alinhar todos os detalhes do projeto contratado. Nesse
+                    momento alinharemos todas as expectativas para iniciar o seu
+                    projeto.
+                  </p>
+                </div>
+                <!-- Slide 5 -->
+
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12">
+                  <img
+                    src="./img/desen.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Projeto e Protótipo
+                </h3>
+                    <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Nessa fase, iniciamos o processo de criação do seu produto,
+                    que após finalizado, geramos pra você um protótipo para que
+                    você visualizar de maneira funcional o seu produto e
+                    realizar as alterações necessárias.
+                  </p>
+                </div>
+
+                <!-- Slide 6 -->
+
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12">
+                  <img
+                    src="./img/process.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+               <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Desenvolvimento
+                  </h3>
+               <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Assim que o protótipo é aprovado iniciamos o processo de
+                    construção. Quando finalizado, enviamos uma prévia de
+                    confirmação para testes e ajustes, dependendo do produto
+                    contratado. O prazo dessa etapa é alinhado previamente.
+                  </p>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="./img/finish.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Produto entregue
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Momento mais esperado, seu produto está pronto. Nesse
+                    momento, te enviamos todos os arquivos nos formatos adequados, te auxiliamos com o manual da marca. Além disso, prestamos suporte pós
+                    entrega a todos nossos clientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center mt-6 gap-10 sm:gap-24 relative z-10">
+      <button id="customPrev"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -ml-3 sm:-ml-10 lg:-mt-90 
+        2xl:-ml-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <div class="swiper-pagination !static"></div>
+      <button id="customNext"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -mr-3 sm:-mr-10 lg:-mt-90 
+        2xl:-mr-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+          </div>
+        </section>
+
+        <div class=" flex-col">
+
+
+<span class="flex justify-center mt-10">
+<strong class="font-light italic "> ** Consultar condições ao receber seu orçamento **</strong>
+<span>
+
+
+  <h1>Descubra se este é o seu Produto ideal</h1>
+   <a href="./orçamento.html">
+<button class="block text-gray-50 font-semibold bg-green-700 p-3 w-50 rounded-2xl m-auto -mt-10 cursor-pointer  transform hover:scale-105 hover:bg-green-500 transition duration-300 ease-in-out lg:text-sm "> Clicando aqui  </button>
+</a>
+
+
+        </div>
+   
+
+ 
+        
+      </section>
+
+      <!-- SESSÃO PAPELARIA DIGITAL  -->
+     <section
+        id="papelaria-digital"
+        class="project-section lg:p-25 mt-40  lg:mt-5 mb-16 text-white"
+      >
+        <p class="italic lg:text-base text-sm ">
+          Uma ferramenta para o digital e presencial
+        </p>
+        <h2 class="lg:text-4xl text-2xl font-extrabold mb-2 inline-block">
+          Papelaria Digital
+        </h2>
+
+        <p class="text-base">
+          Utilize como ferramenta de vendas artes digitais que podem ser impressas ou usadas no online
+     
+        </p>
+
+        <span class="font-bold"> </span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 text-white">
+          <!-- Site Institucional -->
+          <div
+            class="p-6 rounded-2xl bg-gradient-to-b from-purple-600 to-fuchsia-700 shadow-lg"
+          >
+            <h3 class="text-xl font-extrabold mb-2"> 📝 Papelaria</h3>
+            <p class="mb-3 text-sm">
+            Criamos pra você de forma totalmente personalizada <strong class="font-bold"> Arquivos DIGITAIS</strong> que podem ser tanto usados no virtual como impressas por você. De forma exclusiva, você escolhe o tipo de produto, aplicamos a sua identidade visual e copywrite. 
+            </p>
+
+            <h4 class="mb-3 font-bold text-base">Confira nossas opções:</h4>
+            <ul class="space-y-3">
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                 Cartões de Visita 🤝
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    Mesmo na era digital, o cartão de visita permanece como uma ferramenta de networking e marketing extremamente relevante e, em muitos casos, ideal. Ele transcende a tela do celular e oferece uma experiência tátil e pessoal, importante para seu uso no dia a dia. Criamos para você o arquivo digital pronto para impressão ou para uso no Online.
+                  </p>
+
+                 
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Flyers e Folders 📄
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    Esses materiais impressos oferecem uma forma tangível de engajar o público, seja com uma mensagem rápida e direta (flyer) ou com informações mais aprofundadas e organizadas (folder). Eles complementam a estratégia digital e são ótimos para gerar leads e fortalecer o reconhecimento da marca no mundo físico. São ferramentas de uso tanto no digital como no presencial
+                  </p>
+
+                   <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                    Comerciantes Locais: Lojas de varejo, restaurantes, cafeterias, padarias, salões de beleza. Ideais para anunciar promoções do dia, happy hours, novos produtos ou serviços.
+                    </li>
+
+                      <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Organizadores de Eventos: Para shows, palestras, workshops, feiras, festas ou eventos beneficentes. Perfeitos para divulgar data, horário, local e atração principal.
+                    </li>
+
+                     <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Empreendedores Individuais/Serviços Rápidos: Professores particulares, personal trainers, dog walkers, diaristas. Úteis para divulgar um serviço específico e contatos de forma prática.
+                    </li>
+
+                      <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Campanhas Políticas ou Sociais: Para divulgar mensagens-chave, datas de eventos ou informações de contato de candidatos/causas.
+                    </li>
+
+                    
+                      <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Empresas de Entrega/Delivery: Para menus rápidos, serviços de entrega de gás/água ou farmácias.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Papel Timbrado 📝
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                  Item essencial para documentos oficiais, propostas comerciais, orçamentos, contratos, cartas e comunicados. Confere seriedade, padroniza a comunicação e reforça a marca em cada interação escrita. Importante para o uso no âmbito presencial.
+                  </p>
+                 <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Ideal para:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Advogados: Para contratos, pareceres jurídicos, petições e correspondências com clientes e tribunais.
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Consultores: Para propostas de serviço, relatórios de consultoria e cartas de recomendação.
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                     Arquitetos e Engenheiros: Para projetos, orçamentos, memoriais descritivos e laudos técnicos.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Blocos de Anotações e Receituários ✍️
+
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  Utensílio útil no dia a dia do escritório ou para presentear clientes, mantendo a marca presente de forma sutil e funcional. Para profissionais da saúde, é um item obrigatório para prescrições.
+                </div>
+              </li>
+
+               <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Kit de Casamento ou Eventos
+
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  Conjunto de arquivos digitais totalmente personalizados de acordo com a identidade visual ou cores do seu evento. <br>
+<strong class="italic text-xs"> caso quiser contratar identidade visual para eventos consultar valores especiais</strong>
+                  
+
+<ul class="border-2 p-5 rounded-2xl mt-5">
+                    <span class="font-extrabold">Incluso</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Save the Date
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                      Convite Virtual Interativo
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                     Caderno de Votos e Celebrante
+                    </li>
+
+                     <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                     Triângulo de Mesa 
+                    </li>
+
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                     Lágrimas de Alegria
+                    </li>
+
+                      <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                     Kit Toalete
+                    </li>
+                      <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                     Adesivos
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+            </ul>
+
+                   <button
+      class="bg-gradient-to-r from-purple-500 to-purple-800  text-white px-4 py-3 rounded-xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold lg:w-[15rem] mt-10 w-80 cursor-pointer"
+      
+    >
+    <a href="orçamento.html" class='cursor-pointer text-sm leading-none'>
+  Confira o nosso Portófilio
+</a>
+    </button>
+          </div>
+
+          <!-- LConvites Digitais -->
+          <div
+            class="p-6 rounded-2xl bg-gradient-to-b from-purple-600 to-fuchsia-700 shadow-lg"
+          >
+            <h3 class="text-xl font-extrabold mb-2">📱 Convites Digitais</h3>
+            <p class="mb-3 text-sm">
+              Simplifique a organização do seu evento e impressione seus convidados com convites digitais totalmente personalizados. 
+            </p>
+
+            <h4 class="mb-3 font-bold text-base">Confira nossas opções:</h4>
+
+            <ul class="space-y-3">
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold "
+                >
+                  Convite Virtual Estático 
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-3">
+                   É a forma mais simples, basicamente uma imagem com todas as informações do evento.
+                  </p>
+
+                 
+                </div>
+              </li>
+
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Convite Virtual Interativo
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    Nesta opção, incluímos além do design do convite e informações, botões interativos que vão guiar o seu convidado de forma facilitada
+                  </p>
+
+                 
+                </div>
+              </li>
+
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                 Save the Date
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    Arquivo digital Simples personalizado para avisar seus convidados de um evento futuro
+                  </p>
+
+                  
+                </div>
+              </li>
+
+            
+            </ul>
+          </div>
+        </div>
+
+        <section class="py-5 backdrop-blur-md bg-white/10 rounded-2xl mt-20">
+          <div class="md:max-w-5xl 2xl:max-w-6xl   mx-auto px-6">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12 ">
+                  <img
+                    src="./img/us.webp"
+                    alt="ícone de ideia"
+                    class="lg:w-17 lg:h-30 w-24 h-auto mx-auto"
+                  />
+                  <h3
+                    class="text-base sm:text-lg lg:text-lg font-extrabold text-white mt-3 lg:max-w-xs lg:m-auto lg:mt-3"
+                  >
+                    Descubra qual é seu produto ideal com a Brainz
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">Responda o teste inteligente com nossa assistente virtual para descobrir a solução digital ideal pra você <a href="orçamento.html" class="font-extrabold text-pink-300"> clicando aqui</a></p>
+                    
+                  </p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-20 lg:h-25 w-24 h-auto mx-auto"
+                  />
+            <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Envie seu resultado e receba seu orçamento
+                  </h3>
+               <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Ao realizar o teste, será direcionado para encaminhar o
+                    resultado via whatsapp, de forma rápida e eficiente. Assim
+                    você receberá seu orçamento personalizado. Caso tiver
+                    dúvidas ou questionamentos, ficamos a disposição para uma
+                    reunião online gratuíta.
+                  </p>
+                </div>
+
+                <!-- Slide 3 contrato -->
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-16">
+                  <img
+                    src="./img/contrato.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                  <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Pagamento
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Após aprovação da proposta, é realizado o pagamento de acordo com o que for acordado com você
+                  </p>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12  ">
+                  <img
+                    src="./img/reun.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Escolha de Modelo 
+                  </h3>
+                   <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Esse é o momento em que você escolherá a sua opção de arte digital, ou nos enviará os arquivos que forem necessários de acordo com o produto
+                  </p>
+                </div>
+                <!-- Slide 5 -->
+
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12">
+                  <img
+                    src="./img/desen.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Criação
+                </h3>
+                    <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Nessa fase, iniciamos o processo de criação do seu produto,
+                    que após finalizado, enviamos para você conferir e solicitar as alterações. 
+                  </p>
+                </div>
+
+              
+
+                <!-- Slide 6 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-10">
+                  <img
+                    src="./img/web.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Ajustes e Finalização
+                  </h3>
+                   <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Seu produto está quase pronto. Nesse momento, é a ultima chance de você conferir o seu Design. Após confirmado, não será mais possível solicitar alterações. 
+                  </p>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="./img/finish.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Produto entregue
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Momento mais esperado, seu produto está pronto. Te enviamos os arquivos contratados em todos formatos necessários tanto para uso digital como impressão.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center mt-6 gap-10 sm:gap-24 relative z-10">
+      <button id="customPrev"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -ml-3 sm:-ml-10 lg:-mt-90 
+        2xl:-ml-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <div class="swiper-pagination !static"></div>
+      <button id="customNext"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -mr-3 sm:-mr-10 lg:-mt-90 
+        2xl:-mr-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+          </div>
+        </section>
+                <span class="flex justify-center mt-10">
+<strong class="font-light italic "> ** Consultar condições ao receber seu orçamento **</strong>
+<span>
+      </section>
+
+      <!-- SESSÃO REDES SOCIAIS -->
+       <section
+        id="redes-sociais"
+        class="project-section lg:p-25 mt-40 lg:mt-5 mb-16 text-white"
+      >
+        <p class="italic lg:text-base text-sm ">
+          Se destaque onde as pessoas ficam 24hs por dia
+        </p>
+        <h2 class="lg:text-4xl text-2xl font-extrabold mb-2 inline-block">
+          Redes Sociais
+        </h2>
+
+        <p class="text-base">
+         Não perca tempo tentando ser criativo, nós fazemos pra você ! 
+     
+        </p>
+
+        <span class="font-bold"> </span>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 text-white">
+          
+          <div
+            class="p-6 rounded-2xl bg-gradient-to-b from-purple-600 to-fuchsia-700 shadow-lg"
+          >
+            <h3 class="text-xl font-extrabold mb-2"> 📱Produtos Digitais para Redes Sociais</h3>
+            <p class="mb-3 text-sm">
+           Com bilhões de usuários ativos diariamente, as redes sociais oferecem um canal direto e sem precedentes para alcançar seu público-alvo. Muitas vezes é o primeiro local que as pessoas procuram para saber mais sobre seu negócio, informações importantes e para saber mais sobre os seus serviços ou produtos. Além disso, as redes sociais permitem que você construa relacionamentos genuínos com seus clientes, e a consequência disso são vendas e mais lucratividade.
+            </p>
+
+            <h4 class="mb-3 font-bold text-base">Confira nossos serviços:</h4>
+            <ul class="space-y-3">
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                 Arte Digital 
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                   Criamos pra você, de acordo com a sua identidade visual, posts personalizados e exclusivos de acordo com o seu nicho. Você traz a ideia e nós criamos. O foco em gerar engajamento e criar autoridade nas redes.      
+                       </p>
+
+                 <ul class="border-2 p-5 rounded-2xl">
+                    <span class="font-extrabold">Confira nossas opções:</span>
+                    <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                    Artes para Feed do Instagram
+                    </li>
+
+                      <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Artes para Storys e Capas
+                    </li>
+
+                     <li>
+                      <i
+                        class="fa-solid fa-circle-check"
+                        style="color: #ffffff"
+                      ></i>
+                   Pacotes de posts com valor acessível
+                    </li>
+
+                   
+                  </ul>
+
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Posts Carrossel
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                Posts carrossel são uma ferramenta poderosa para contar histórias, educar e engajar seu público nas redes sociais, especialmente como uma empresa de criação de produtos digitais. Eles permitem que você apresente diversas informações de forma visual e interativa.
+                  </p>
+
+                  
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Avaliação e ajuste de perfil
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                  Te ajudamos a ajustar o seu perfil de acordo com seu nicho e as últimas tendências do algorítimo. Desde a sua biografia, como em relação a foto de perfil e organização do feed
+                  </p>
+                
+                </div>
+              </li>
+
+              <li class="bg-white/30 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Página de Links Biografia do Instagram
+
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  A nova sensação do momento. Criamos pra você uma página totalmente personalizada e interativa, com imagens, cores que tenham a ver com o seu negócio. A porta de entrada do usuário a todos os serviços que você oferece de maneira interativa e facilitada.
+                </div>
+              </li>
+
+             
+            </ul>
+
+                   <button
+      class="bg-gradient-to-r from-purple-500 to-purple-800  text-white px-4 py-3 rounded-xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold lg:w-[15rem] mt-10 w-80 cursor-pointer"
+      
+    >
+    <a href="orçamento.html" class='cursor-pointer text-sm leading-none'>
+  Confira o nosso Portófilio
+</a>
+    </button>
+          </div>
+
+          <!-- LConvites Digitais -->
+          <div
+            class="p-6 rounded-2xl bg-gradient-to-b from-purple-600 to-fuchsia-700 shadow-lg"
+          >
+            <h3 class="text-xl font-extrabold mb-2">📦Pacotes Especiais </h3>
+            <p class="mb-3 text-sm">
+              Simplifique a criação de posts das suas redes sociais, a weinsite tem opções que vão te ajudar a destravar e focar suas energias no que realmente importa.
+            </p>
+
+            <h4 class="mb-3 font-bold text-base">Confira nossos pacotes:</h4>
+
+            <ul class="space-y-3">
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold "
+                >
+                  Pacote Gestão de Posts 
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-3">
+                  Nesse pacote, criamos um conteúdo mensal básico para suas redes. O diferencial é que realizamos pra você a postagem nas suas redes, te auxiliamos na escolha de horários e você não se preocupa. Além disso, te ajudamos a estruturar o copywrite de suas postagens, de acordo com seu nicho e objetivos.
+                  </p>
+
+                  
+
+                </div>
+              </li>
+
+              <li class="bg-white/10 p-4 rounded-xl">
+                <button
+                  onclick="toggleItem(this)"
+                  class="w-full flex justify-between items-center text-left font-semibold"
+                >
+                  Pacote Premium Posts
+                  <span class="text-white">+</span>
+                </button>
+                <div class="mt-2 text-sm hidden">
+                  <p class="mb-4">
+                    A opção perfeita para ti que não consegue ter ideias ou ser criativo. Te ajudamos a destravar no planejamento mensal de conteúdo, ou seja, te ajudamos a pensar em uma estratégia de acordo com seus objetivos e com o seu nicho. Criamos um calendário de posts e postamos pra você. 
+                  </p>
+
+                  
+                </div>
+              </li>
+
+           
+
+            
+            </ul>
+          </div>
+        </div>
+
+        <section class="py-5 backdrop-blur-md bg-white/10 rounded-2xl mt-20">
+          <div class="md:max-w-5xl 2xl:max-w-6xl   mx-auto px-6">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12 ">
+                  <img
+                    src="./img/us.webp"
+                    alt="ícone de ideia"
+                    class="lg:w-17 lg:h-30 w-24 h-auto mx-auto"
+                  />
+                  <h3
+                    class="text-base sm:text-lg lg:text-lg font-extrabold text-white mt-3 lg:max-w-xs lg:m-auto lg:mt-3"
+                  >
+                    Descubra qual é seu produto ideal com a Brainz
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">Responda o teste inteligente com nossa assistente virtual para descobrir a solução digital ideal pra você <a href="orçamento.html" class="font-extrabold text-pink-300"> clicando aqui</a></p>
+                    
+                  </p>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-20 lg:h-25 w-24 h-auto mx-auto"
+                  />
+            <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Envie seu resultado e receba seu orçamento
+                  </h3>
+               <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Ao realizar o teste, será direcionado para encaminhar o
+                    resultado via whatsapp, de forma rápida e eficiente. Assim
+                    você receberá seu orçamento personalizado. Caso tiver
+                    dúvidas ou questionamentos, ficamos a disposição para uma
+                    reunião online gratuíta.
+                  </p>
+                </div>
+
+                <!-- Slide 3 contrato -->
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-16">
+                  <img
+                    src="./img/contrato.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                  <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Pagamento
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Após aprovação da proposta, é realizado o pagamento de acordo com o que for acordado com você
+                  </p>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12  ">
+                  <img
+                    src="./img/reun.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Reunião de Alinhamento
+                  </h3>
+                   <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Esse é o momento em que juntos iremos alinhar suas expectativas e o planejamento para criamos o seu produto, de acordo com o que for contratado.
+                  </p>
+                </div>
+                <!-- Slide 5 -->
+
+                <div class="swiper-slide text-center px-2 mt-20 lg:mt-12">
+                  <img
+                    src="./img/desen.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Criação
+                </h3>
+                    <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Iniciamos o processo de criação do seu produto,
+                    que após finalizado, enviamos para você conferir e solicitar as alterações. Consultar limites de solicitações.
+                  </p>
+                </div>
+
+              
+
+                <!-- Slide 6 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-10">
+                  <img
+                    src="./img/web.png"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Ajustes e Finalização
+                  </h3>
+                   <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Seu produto está quase pronto. Nesse momento, é a ultima chance de você conferir o seu Design. Após confirmado, não será mais possível solicitar alterações. 
+                  </p>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="swiper-slide text-center px-2 mt-16 lg:mt-12">
+                  <img
+                    src="./img/finish.webp"
+                    alt="botão flutuante de whatsapp"
+                    class="lg:w-30 lg:h-28 w-24 h-auto mx-auto"
+                  />
+                 <h3 class="text-base sm:text-base lg:text-lg font-extrabold text-white mt-5 lg:max-w-xs lg:m-auto lg:mt-3">
+                    Produto entregue
+                  </h3>
+                  <p class="text-sm sm:text-base lg:text-sm lg:max-w-xs lg:m-auto lg:mt-2 text-white font-light mt-2">
+                    Momento mais esperado, seu produto está pronto. Na contratação somente das artes, enviamos pra você todos os arquivos em alta qualidade para uso digital. Caso for os pacotes, alinhamos com você como será feito.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center mt-6 gap-10 sm:gap-24 relative z-10">
+      <button id="customPrev"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -ml-3 sm:-ml-10 lg:-mt-90 
+        2xl:-ml-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <div class="swiper-pagination !static"></div>
+      <button id="customNext"
+        class="bg-white/30 text-white hover:bg-purple-100 rounded-full p-2 shadow-md transition w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center -mt-12 sm:-mt-64 -mr-3 sm:-mr-10 lg:-mt-90 
+        2xl:-mr-20 lg:-mr-12">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+          </div>
+        </section>
+
+        <span class="flex justify-center mt-10">
+<strong class="font-light italic "> ** Consultar condições ao receber seu orçamento **</strong>
+<span>
+        
+      </section>
+
+
+    </div>
+
+    <div
+      id="modal1"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <button
+          onclick="closeModal('modal1')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/pg1lamour.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/pg2lamour.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/pg3lamour.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+      </div>
+    </div>
+    <div
+      id="modal2"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <button
+          onclick="closeModal('modal2')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/pg1insalute.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/pg2insalute.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/pg3insalute.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+      </div>
+    </div>
+    <div
+      id="modal3"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <button
+          onclick="closeModal('modal3')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/pg1araupp.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/pg2araupp.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/pg3araupp.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain mb-10"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalNutri"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <button
+          onclick="closeModal('modalNutri')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/desknutri.webp"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalSite"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <button
+          onclick="closeModal('modalSite')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/deskport.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalInsalute"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <button
+          onclick="closeModal('modalInsalute')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/desk.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+      </div>
+    </div>
+    <div
+      id="modalCasamento"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center"
+    >
+      <div class="relative max-w-4xl w-full p-6 my-10 bg-opacity-60 rounded-xl">
+        <button
+          onclick="closeModal('modalCasamento')"
+          class="absolute bottom-[52rem] lg:-top-5 right-4 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/ekId.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/ek2.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+        <img
+          src="./img/ek3.webp"
+          alt="Imagem Modal"
+          class="rounded w-full object-contain"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalKitCasamento"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalKitCasamento')"
+          class="absolute top-2 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/votos1.webp"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="./img/triangulo2.webp"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/conviteInterativo3.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+
+        <img
+          src="./img/lagrimas4.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/toalete5.webp"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+
+        <img
+          src="./img/adesivo6.webp"
+          alt="Imagem Modal"
+          class="w-full object-contain mb-4 rounded-b-2xl"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalManual"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalManual')"
+          class="absolute top-2 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+
+        <img
+          src="./img/manualOne.jpg"
+          alt="Imagem Modal"
+          class="rounded-t-2xl w-full object-contain"
+        />
+        <img
+          src="./img/manual1.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/manual2.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/manual3.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/manual5.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain"
+        />
+        <img
+          src="./img/manual6.jpg"
+          alt="Imagem Modal"
+          class="w-full object-contain mb-4 rounded-b-2xl"
+        />
+      </div>
+    </div>
+
+    <div
+      id="modalRedesSociais1"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalRedesSociais1')"
+          class="absolute top-2 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+        <img
+          src="https://via.placeholder.com/600x400?text=Arte+Rede+Social+Detalhe+1"
+          alt="Detalhe Rede Social 1"
+          class="rounded-t-2xl w-full object-contain"
+        />
+      </div>
+    </div>
+    <div
+      id="modalRedesSociais2"
+      class="hidden fixed inset-0 backdrop-blur-md z-50 overflow-y-auto flex justify-center items-start"
+    >
+      <div
+        class="relative max-w-4xl w-full p-6 mt-10 mb-20 bg-opacity-60 rounded-xl"
+      >
+        <button
+          onclick="closeModal('modalRedesSociais2')"
+          class="absolute top-2 right-1 text-white text-3xl font-bold hover:text-purple-400 transition cursor-pointer"
+        >
+          ×
+        </button>
+        <img
+          src="https://via.placeholder.com/600x400?text=Arte+Rede+Social+Detalhe+2"
+          alt="Detalhe Rede Social 2"
+          class="rounded-t-2xl w-full object-contain"
+        />
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/src/script.js"></script>
+  </body>
+</html>
