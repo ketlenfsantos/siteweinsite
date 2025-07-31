@@ -1,31 +1,32 @@
 const express = require('express');
 const cors = require('cors');
-const mysql = require('mysql');
+const mysql = require('mysql2'); // mysql2 no lugar de mysql
 const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: '*',
+}));
 app.use(bodyParser.json());
 
-const db = mysql.createConnection({
+// Cria o pool de conexões
+const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
-  database: process.env.DB_NAME
-});
-
-db.connect((err) => {
-  if (err) {
-    console.error('Erro ao conectar ao banco:', err);
-  } else {
-    console.log('Conectado ao MySQL!');
-  }
+  database: process.env.DB_NAME,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
 app.post('/api/leads', (req, res) => {
   const { orcamento, data_envio } = req.body;
+
+  console.log('Orçamento recebido:', JSON.stringify(orcamento, null, 2));
+  console.log('Data de envio:', data_envio);
 
   const { contato, servico } = orcamento;
 
@@ -61,9 +62,7 @@ app.post('/api/leads', (req, res) => {
     data_envio
   ];
 
-  console.log('Recebido no backend:', req.body);
-
-  db.query(sql, values, (error, results) => {
+  pool.query(sql, values, (error, results) => {
     if (error) {
       console.error('Erro ao salvar lead:', error);
       return res.status(500).json({ error: 'Erro ao salvar lead' });
@@ -71,6 +70,7 @@ app.post('/api/leads', (req, res) => {
     res.status(200).json({ message: 'Lead salvo com sucesso' });
   });
 });
+
 app.get('/', (req, res) => {
   res.send('Backend rodando!');
 });

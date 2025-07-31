@@ -11,8 +11,7 @@
     "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "watch:html": "cpy ./src/index.html ./dist --watch",
     "watch:js": "cpy ./src/script.js ./dist --watch",
-     "build": "npx rimraf dist && npx cpy \"src/*.html\" dist && npx cpy src/script.js dist --parents=false && npx cpy \"src/img/**/*.*\" dist/img && npx tailwindcss -i src/input.css -o dist/output.css --minify"
-
+    "build": "npx rimraf dist && npx cpy \"src/*.html\" dist && npx cpy src/script.js dist --parents=false && npx cpy \"src/img/**/*.*\" dist/img && npx tailwindcss -i src/input.css -o dist/output.css --minify"
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
@@ -22,6 +21,7 @@
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "mysql2": "^3.14.3",
     "postcss": "^8.5.6",
     "swiper": "^11.2.8"
   },

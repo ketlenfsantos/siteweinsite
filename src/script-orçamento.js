@@ -706,8 +706,9 @@
           }, 1500);
 
           localStorage.setItem('orcamento', JSON.stringify(orcamento));
+          console.log('Enviando orcamento...')
 
-          fetch('http://localhost:3001/api/leads', {
+          fetch('https://siteweinsite.onrender.com/api/leads', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
