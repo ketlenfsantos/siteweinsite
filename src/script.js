@@ -156,7 +156,7 @@ if (toggle && mobileMenu) {
     }
   });
 
-  // Fecha ao clicar em link (exceto o que tem ID menuMobs)
+  // Fecha ao clicar em link (exceto o que tem ID   )
   const menuLinks = mobileMenu.querySelectorAll("li a");
   menuLinks.forEach(link => {
     link.addEventListener("click", (event) => {
@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
       interval: 2000,
       pauseOnHover: true,
       arrows: false,
-      pagination: true,
+      pagination: false,
       lazyLoad: 'nearby',
       keyboard: 'global',
       speed: 600,
@@ -566,6 +566,7 @@ function openModal(id) {
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
+        
         },
         navigation: {
           nextEl: '#customNext',

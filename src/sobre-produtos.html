@@ -77,93 +77,160 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="botão flutuante de whatsapp">
         </a>
 
-  <header class="flex justify-center lg:gap-32  gap-20  p-8">
-    <a href="./index.html">
-    <img src="./img/logo-nav.webp" alt="Logo do site" class="w-58 h-20 mt-10 lg:w-42 lg:h-15 lg:mt-0" alt="Logotipo do Header" /> </a>
 
- <button id="menuToggle" class="lg:hidden z-50 relative ">
-  <svg id="menuIcon" class="w-8 h-8 mt-9  text-white transition-transform duration-300 cursor-pointer" fill="none"
-    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 6h16M4 12h16M4 18h16" />
-  </svg>
-</button>
-  
-  <!-- navegação desktop -->
-    <nav id="menu" class="hidden lg:flex gap-10 items-center text-sm"> <ul class="flex p-5 gap-16">
-      <li class="cursor-pointer hover:text-purple-300"> <a href="./index.html"> Início</a></li>
-       <li id="teste2" class="cursor-pointer hover:text-purple-300"> <a href="./sobre-produtos.html"> Nossos Serviços</a></li>
-       <li class="cursor-pointer hover:text-purple-300"> <a href="./portfólio.html"> Portfólio</a></li>
-       <li id="teste" class="cursor-pointer hover:text-purple-300"> <a href="./orçamento.html">Faça o Teste </a>
+<header class="flex justify-center  lg:gap-32 gap-12 lg:p-10  ">
+      <a href="./index.html">
+        <img
+          src="./img/logo-nav.webp"
+          alt="Logo do site"
+          class="w-44 h-16 mt-12 lg:w-42 lg:h-15 lg:mt-0"
+          alt="Logotipo do Header"
+        />
+      </a>
 
-       </li>
-    </ul></nav>
+      <button id="menuToggle" class="lg:hidden z-50 relative">
+        <svg
+          id="menuIcon"
+          class="w-8 h-8 mt-12 text-white transition-transform duration-300 cursor-pointer"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
 
-   <!-- DIV HOVER MENU TESTE -->
+      <!-- navegação desktop -->
+      <nav id="menu" class="hidden lg:flex gap-10 items-center text-sm">
+        <ul class="flex p-5 gap-16">
+          <li class="cursor-pointer hover:text-purple-300">
+            <a href="./index.html"> Início</a>
+          </li>
+          <li id="teste2" class="cursor-pointer hover:text-purple-300">
+            <a href="./sobre-produtos.html"> Nossos Serviços</a>
+          </li>
+          <li class="cursor-pointer hover:text-purple-300">
+            <a href="./portfólio.html"> Portfólio</a>
+          </li>
+          <li id="teste" class="cursor-pointer hover:text-purple-300">
+            <a href="./orçamento.html">Faça o Teste </a>
+          </li>
+        </ul>
+      </nav>
 
- <div id="hoverDiv" class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/12 bg-transparent  text-white px-4  w-90 backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-5">
-    
-    <!-- Texto -->
-    <p class="w-2/3 font-extrabold text-sm m-auto">
-      Olá, eu sou a Brainz!<br />
-      Vamos juntos descobrir o seu produto ideal?
-    </p>
+      <!-- DIV HOVER MENU TESTE -->
 
-    <!-- Imagem -->
-    <img src="./img/brainzoi.webp" alt="imagem avatar brainz" class="w-30   h-auto">
-  </div>
+      <div
+        id="hoverDiv"
+        class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/12 bg-transparent text-white px-4 w-90 backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-5"
+      >
+        <!-- Texto -->
+        <p class="w-2/3 font-extrabold text-sm m-auto">
+          Olá, eu sou a Brainz!<br />
+          Vamos juntos descobrir o seu produto ideal?
+        </p>
 
-  <!-- DIV NOSSOS SERVIÇOS
+        <!-- Imagem -->
+        <img
+          src="./img/brainzoi.webp"
+          alt="imagem avatar brainz"
+          class="w-30 h-auto"
+        />
+      </div>
+
+      <!-- DIV NOSSOS SERVIÇOS
     -->
 
-  <div id="hoverDiv2" class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/16 bg-transparent  text-white px-4  w-[580px] backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-0">
-    
-    <!-- Texto -->
-<ul class="p-5 grid grid-cols-2 space-x-8">
-  <li class="p-2 cursor-pointer">
-    <a href="#sites" class="flex items-center gap-2">
-      <img src="./img/brain.png" alt="" class="h-6 inline-block"> Sites e Landing Pages
-    </a>
-  </li>
-  <li class="p-2 cursor-pointer">
-    <a href="#identidade" class="flex items-center gap-2">
-      <img src="./img/brain.png" alt="" class="h-6 inline-block"> Identidade Visual
-    </a>
-  </li>
-  <li class="p-2 cursor-pointer">
-    <a href="#redes" class="flex items-center gap-2">
-      <img src="./img/brain.png" alt="" class="h-6 inline-block"> Redes Sociais
-    </a>
-  </li>
-  <li class="p-2 cursor-pointer">
-    <a href="#papelaria" class="flex items-center gap-2">
-      <img src="./img/brain.png" alt="" class="h-6 inline-block"> Papelaria Digital
-    </a>
-  </li>
-</ul>
+      <div
+        id="hoverDiv2"
+        class="hidden flex flex-row absolute top-full left-1/3 -translate-x-1/16 bg-transparent text-white px-4 w-[580px] backdrop-blur-md rounded-2xl border border-white shadow-lg gap-4 transition-all duration-300 z-50 mt-0"
+      >
+        <!-- Texto -->
+        <ul class="p-5 grid grid-cols-2 space-x-8">
+          <li class="p-2 cursor-pointer">
+            <a href="#sites" class="flex items-center gap-2">
+              <img src="./img/brain.png" alt="" class="h-6 inline-block" />
+              Sites e Landing Pages
+            </a>
+          </li>
+          <li class="p-2 cursor-pointer">
+            <a href="#identidade" class="flex items-center gap-2">
+              <img src="./img/brain.png" alt="" class="h-6 inline-block" />
+              Identidade Visual
+            </a>
+          </li>
+          <li class="p-2 cursor-pointer">
+            <a href="#redes" class="flex items-center gap-2">
+              <img src="./img/brain.png" alt="" class="h-6 inline-block" />
+              Redes Sociais
+            </a>
+          </li>
+          <li class="p-2 cursor-pointer">
+            <a href="#papelaria" class="flex items-center gap-2">
+              <img src="./img/brain.png" alt="" class="h-6 inline-block" />
+              Papelaria Digital
+            </a>
+          </li>
+        </ul>
+      </div>
 
-  </div>
+      <a href="https://wa.me/5551989208255" target="_blank">
+        <button
+          class="hidden lg:block bg-green-700 text-xs w-40 mt-2 h-10 rounded-2xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold cursor-pointer"
+        >
+          Fale Conosco
+        </button>
+      </a>
+
+         <div
+        id="mobileMenu"
+        class="menuMobs backdrop-blur-xl hidden max-h-0 overflow-hidden transition-all duration-500 bg-br fixed top-56 left-1/2 -translate-x-1/2 w-full text-center text-white max-w-md rounded-b-lg shadow-lg z-50 font-poppins"
+      >
+        <ul class="">
+          <a href="./index.html">
+          <li  class="hover:bg-purple-200/40 rounded w-20 m-auto p-1 cursor-pointer">
+            Início
+          </li>
+          </a>
+            <a href="./sobre-produtos.html">
+          <li  class="hover:bg-purple-200/40  rounded  w-40 m-auto p-1 cursor-pointer">
+            Nossos Serviços
+          </li>
+            </a>
+              <a href="./portfólio.html">
+            <li  class="hover:bg-purple-200/40 rounded w-20 m-auto p-1 cursor-pointer">
+            Portfólio
+          </li>
+        </a>
+
+          <a href="./orçamento.html">
+          <li 
+            id="menuMobs"
+            class="hover:bg-purple-200/40 rounded w-40 m-auto p-1 cursor-pointer"
+          >
+            Faça o teste
+          </li>
+        </a>
+
+          
+           <a href="https://wa.me/5551989208255" target="_blank">
+            <li class="bg-green-600 rounded-xl mt-2 w-35 mx-auto text-sm p-1">
+        
+          Fale Conosco
+       </li>
+      </a>
+
+        </ul>
+      </div>
 
 
-  <a href="https://wa.me/5551989208255" target="_blank" >
-    <button class="hidden lg:block bg-green-700 text-xs w-40 mt-2 h-10 rounded-2xl hover:scale-105 hover:bg-green-500 transition duration-300 font-semibold cursor-pointer">
-  Fale Conosco
-    </button>
-  </a>
+    </header>
 
-     <div id="mobileMenu" class="menuMobs hidden max-h-0 overflow-hidden transition-all duration-500 bg-gradient-to-r from-blue-500 via-purple-900 to-pink-500 fixed top-40 left-1/2 -translate-x-1/2 w-full text-center text-white  max-w-md rounded-b-lg shadow-lg z-50">
-      <ul class="">
-        <li class="hover:bg-purple-200/40 w-20 m-auto  p-1 cursor-pointer">Início</li>
-        <li class="hover:bg-purple-200/40 w-40 m-auto  p-1 cursor-pointer">Nossos Serviços</li>
-        <li class="hover:bg-purple-200/40 w-20 m-auto p-1 cursor-pointer">Portfólio</li>
-        <li id="menuMobs" class="hover:bg-purple-200/40 w-40 m-auto p-1 cursor-pointer">Faça o teste</li>
-      </ul>
 
-      
-    </div>
-    
-  </header>
-
+  
   
     <section class="mt-10 fadeInDown" data-anime="300">
       <div class="m-auto text-center">
@@ -758,7 +825,7 @@
         class="project-section lg:p-25 p-1 py-10 lg:mt-5 mt-32 mb-16 text-white hidden"
       >
 
-       <p class="italic lg:text-base text-sm">
+       <p class="italic lg:text-base text-xs">
          O primeiro passo para o reconhecimento da sua marca
         </p>
         <h2 class="lg:text-4xl text-2xl font-extrabold mb-2 inline-block">
@@ -1273,7 +1340,7 @@
         id="papelaria-digital"
         class="project-section lg:p-25 mt-40  lg:mt-5 mb-16 text-white"
       >
-        <p class="italic lg:text-base text-sm ">
+        <p class="italic lg:text-base text-xs ">
           Uma ferramenta para o digital e presencial
         </p>
         <h2 class="lg:text-4xl text-2xl font-extrabold mb-2 inline-block">
@@ -1733,7 +1800,7 @@
         id="redes-sociais"
         class="project-section lg:p-25 mt-40 lg:mt-5 mb-16 text-white"
       >
-        <p class="italic lg:text-base text-sm ">
+        <p class="italic lg:text-base text-xs ">
           Se destaque onde as pessoas ficam 24hs por dia
         </p>
         <h2 class="lg:text-4xl text-2xl font-extrabold mb-2 inline-block">
@@ -2354,10 +2421,9 @@
           ×
         </button>
         <img
-          src="https://via.placeholder.com/600x400?text=Arte+Rede+Social+Detalhe+1"
+          src=""
           alt="Detalhe Rede Social 1"
-          class="rounded-t-2xl w-full object-contain"
-        />
+          class="rounded-t-2xl w-full object-contain"/>
       </div>
     </div>
     <div
@@ -2374,13 +2440,13 @@
           ×
         </button>
         <img
-          src="https://via.placeholder.com/600x400?text=Arte+Rede+Social+Detalhe+2"
+          src=""
           alt="Detalhe Rede Social 2"
           class="rounded-t-2xl w-full object-contain"
         />
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/src/script.js"></script>
+    <script src="script.js"></script>  
   </body>
 </html>

@@ -47,12 +47,12 @@
       />
     </a>
 
-    <header class="flex justify-center lg:gap-32 gap-20 p-8">
+    <header class="flex justify-center lg:gap-32 gap-12 lg:p-10">
       <a href="./index.html">
         <img
           src="./img/logo-nav.webp"
           alt="Logo do site"
-          class="w-58 h-20 mt-10 lg:w-42 lg:h-15 lg:mt-0"
+          class="w-44 h-16 mt-12 lg:w-42 lg:h-15 lg:mt-0"
           alt="Logotipo do Header"
         />
       </a>
@@ -60,7 +60,7 @@
       <button id="menuToggle" class="lg:hidden z-50 relative">
         <svg
           id="menuIcon"
-          class="w-8 h-8 mt-9 text-white transition-transform duration-300 cursor-pointer"
+          class="w-8 h-8 mt-12 text-white transition-transform duration-300 cursor-pointer"
           fill="none"
           stroke="currentColor"
           stroke-width="2"
@@ -156,24 +156,45 @@
 
       <div
         id="mobileMenu"
-        class="menuMobs hidden max-h-0 overflow-hidden transition-all duration-500 bg-gradient-to-r from-blue-500 via-purple-900 to-pink-500 fixed top-40 left-1/2 -translate-x-1/2 w-full text-center text-white max-w-md rounded-b-lg shadow-lg z-50"
+        class="menuMobs backdrop-blur-xl hidden max-h-0 overflow-hidden transition-all duration-500 bg-br fixed top-48 left-1/2 -translate-x-1/2 w-full text-center text-white max-w-md rounded-b-lg shadow-lg z-50 font-poppins"
       >
         <ul class="">
-          <li class="hover:bg-purple-200/40 w-20 m-auto p-1 cursor-pointer">
-            Início
-          </li>
-          <li class="hover:bg-purple-200/40 w-40 m-auto p-1 cursor-pointer">
-            Nossos Serviços
-          </li>
-          <li class="hover:bg-purple-200/40 w-20 m-auto p-1 cursor-pointer">
-            Portfólio
-          </li>
-          <li
-            id="menuMobs"
-            class="hover:bg-purple-200/40 w-40 m-auto p-1 cursor-pointer"
-          >
-            Faça o teste
-          </li>
+          <a href="./index.html">
+            <li
+              class="hover:bg-purple-200/40 rounded w-20 m-auto p-1 cursor-pointer"
+            >
+              Início
+            </li>
+          </a>
+          <a href="./sobre-produtos.html">
+            <li
+              class="hover:bg-purple-200/40 rounded w-40 m-auto p-1 cursor-pointer"
+            >
+              Nossos Serviços
+            </li>
+          </a>
+          <a href="./portfólio.html">
+            <li
+              class="hover:bg-purple-200/40 rounded w-20 m-auto p-1 cursor-pointer"
+            >
+              Portfólio
+            </li>
+          </a>
+
+          <a href="./orçamento.html">
+            <li
+              id="menuMobs"
+              class="hover:bg-purple-200/40 rounded w-40 m-auto p-1 cursor-pointer"
+            >
+              Faça o teste
+            </li>
+          </a>
+
+          <a href="https://wa.me/5551989208255" target="_blank">
+            <li class="bg-green-600 rounded-xl mt-2 w-35 mx-auto text-sm p-1">
+              Fale Conosco
+            </li>
+          </a>
         </ul>
       </div>
     </header>
@@ -833,6 +854,66 @@
         // Mostra a primeira categoria por padrão ao carregar a página
         if (projectSections.length > 0) {
           showCategory(projectSections[0].id);
+        }
+
+        const toggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        function openMenu() {
+          mobileMenu.classList.remove('hidden', 'max-h-0');
+          mobileMenu.classList.add('max-h-[500px]', 'p-6');
+        }
+
+        function closeMenu() {
+          mobileMenu.classList.add('max-h-0');
+          mobileMenu.classList.remove('max-h-[500px]', 'p-6'); // Corrigido!
+        }
+
+        if (toggle && mobileMenu) {
+          let isOpen = false;
+
+          toggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // impede que o clique propague para o document
+            isOpen = !isOpen;
+
+            if (isOpen) {
+              openMenu();
+            } else {
+              closeMenu();
+            }
+          });
+
+          // Fecha o menu ao clicar fora dele
+          document.addEventListener('click', (event) => {
+            if (
+              !mobileMenu.contains(event.target) &&
+              !toggle.contains(event.target)
+            ) {
+              if (isOpen) {
+                closeMenu();
+                isOpen = false;
+              }
+            }
+          });
+
+          // Fecha ao rolar a página
+          window.addEventListener('scroll', () => {
+            if (isOpen) {
+              closeMenu();
+              isOpen = false;
+            }
+          });
+
+          // Fecha ao clicar em link (exceto o que tem ID   )
+          const menuLinks = mobileMenu.querySelectorAll('li a');
+          menuLinks.forEach((link) => {
+            link.addEventListener('click', (event) => {
+              if (event.target.id !== 'menuMobs') {
+                closeMenu();
+                isOpen = false;
+              }
+            });
+          });
         }
       });
     </script>
