@@ -71,6 +71,9 @@ app.post('/api/leads', (req, res) => {
     res.status(200).json({ message: 'Lead salvo com sucesso' });
   });
 });
+app.get('/', (req, res) => {
+  res.send('Backend rodando!');
+});
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
